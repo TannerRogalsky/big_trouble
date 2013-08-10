@@ -15,10 +15,9 @@ function MapLoader.load(map_name)
     for x = 0, tileset_data.imagewidth, tileset_data.tilewidth do
       local tile_width, tile_height = tileset_data.tilewidth, tileset_data.tileheight
       local image_width, image_height = tileset_data.imagewidth, tileset_data.imageheight
-      table.insert(tileset_quads, g.newQuad(x, y, tile_width, tile_height, image_width, image_height))
 
-      if y == 0 then
-        print(x, y, #tileset_quads)
+      if x + tile_width < tileset_data.imagewidth and y + tile_height < tileset_data.imageheight then
+        table.insert(tileset_quads, g.newQuad(x, y, tile_width, tile_height, image_width, image_height))
       end
     end
   end
@@ -59,20 +58,27 @@ function MapLoader.load(map_name)
     local canvas = g.newCanvas(map_area.width * map_area.tile_width, map_area.height * map_area.tile_height)
     g.setCanvas(canvas)
     local data_index = 0
-    for x=0,tiles_metadata.width - 1 do
-      for y=0,tiles_metadata.height - 1 do
+    for y=0,tiles_metadata.height - 1 do
+      -- data_index = data_index - 1
+      for x=0,tiles_metadata.width - 1 do
         data_index = data_index + 1
         local quad_index = tiles_metadata.data[data_index]
         local quad = tileset_quads[quad_index]
+        -- print(x, y, quad_index, quad)
 
-        if quad then
+        if quad_index ~= 0 then
+          -- print(x, y)
           g.drawq(tileset_data.image, quad, x * map_area.tile_width, y * map_area.tile_height)
+          -- g.print(quad_index, x * map_area.tile_width, y * map_area.tile_height)
         end
       end
     end
     g.setCanvas()
     table.insert(map_area.tile_layers, canvas)
   end
+
+  map_area.tileset_data = tileset_data
+  map_area.tileset_quads = tileset_quads
 
   return map_area
 end

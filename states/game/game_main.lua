@@ -3,7 +3,7 @@ local Main = Game:addState('Main')
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
-  self.map = MapLoader.load("template")
+  self.map = MapLoader.load("template2")
 end
 
 function Main:update(dt)

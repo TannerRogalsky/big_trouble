@@ -28,7 +28,7 @@ local Movable = {
         self:insert_into_grid()
       end
       self.world_x, self.world_y = new_x, new_y
-      self.angle = math.atan2(delta_y, delta_x)
+      self.angle = math.atan2(delta_y, delta_x) + math.pi / 2
 
       if self.physics_body then
         self.physics_body:move(delta_x, delta_y)

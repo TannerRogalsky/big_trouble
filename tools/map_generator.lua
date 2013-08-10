@@ -75,7 +75,7 @@ local function template_map(x, y, w, h)
 end
 
 do
-  local x, y = arg[1] or 14, arg[2] or 14
-  local w, h = arg[3] or 50, arg[4] or 50
+  local x, y = tonumber(arg[1]) or 14, tonumber(arg[2]) or 14
+  local w, h = tonumber(arg[3]) or 50, tonumber(arg[4]) or 50
   template_map(x, y, w, h)
 end

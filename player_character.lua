@@ -4,6 +4,16 @@ PlayerCharacter.static.z = 1
 function PlayerCharacter:initialize(parent, x, y, width, height)
   MapEntity.initialize(self, parent, x, y, width, height, PlayerCharacter.z)
 
+  self.angle = 0
+  local _, _, pixel_width, pixel_height = self:world_bounds()
+  self.render_surface = g.newCanvas(pixel_width, pixel_height)
+  g.setCanvas(self.render_surface)
+  g.setColor(COLORS.red:rgb())
+  g.rectangle("fill", 0, 0, pixel_width, pixel_height)
+  g.setColor(COLORS.black:rgb())
+  g.line(pixel_width / 2, 0, pixel_width / 2, pixel_height / 2)
+  g.setCanvas()
+
   self.controls = {
     keyboard = {
       update = {
@@ -35,8 +45,9 @@ function PlayerCharacter:keypressed(key, unicode)
 end
 
 function PlayerCharacter:render()
-  g.setColor(COLORS.red:rgb())
-  g.rectangle("fill", self:world_bounds())
+  local x, y, width, height = self:world_bounds()
+  g.setColor(COLORS.white:rgb())
+  g.draw(self.render_surface, x + width / 2, y + height / 2, self.angle, 1, 1, width / 2, height / 2)
 end
 
 

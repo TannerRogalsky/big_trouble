@@ -3,7 +3,9 @@ local Main = Game:addState('Main')
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
-  self.map = MapLoader.load("template2")
+  self.map = MapLoader.load("template3")
+
+  self.camera:setScale(0.25, 0.25)
 
   local cbounds = self.camera.bounds
   cbounds.negative_x = 0
@@ -23,7 +25,8 @@ function Main:render()
   self.camera:set()
 
   local cx, cy = self.character:world_bounds()
-  self.camera:setPosition(cx - self.map.pixel_width / 2, cy - self.map.pixel_height / 2)
+
+  self.camera:setPosition(cx - (g.getWidth() * self.camera.scaleX) / 2, cy - (g.getHeight() * self.camera.scaleY) / 2)
   self.map:render()
 
   self.camera:unset()

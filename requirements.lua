@@ -41,6 +41,7 @@ require 'map_entity'
 require 'map_loader'
 require 'direction'
 require 'player_character'
+require 'dialogue_system'
 
 local function require_all(directory)
   local lfs = love.filesystem

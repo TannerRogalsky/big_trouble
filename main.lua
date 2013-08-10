@@ -9,6 +9,7 @@ function love.update(dt)
   cron.update(dt)
   tween.update(dt)
   loveframes.update(dt)
+  DialogueSystem.update(dt)
 end
 
 function love.mousepressed(x, y, button)
@@ -46,6 +47,7 @@ end
 function love.draw()
   game:render()
   loveframes.draw()
+  DialogueSystem.render()
 end
 
 function love.focus(has_focus)

@@ -2,12 +2,12 @@ local triggers = {}
 
 function triggers.test_enter_function(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
-  print(tostring(player) .. " entered " .. tostring(tile))
+  DialogueSystem.say(DialogueSystem.entities.Anubis, "test")
 end
 
 function triggers.test_exit_function(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
-  print(tostring(player) .. " left " .. tostring(tile))
+  DialogueSystem.clear()
 end
 
 return triggers

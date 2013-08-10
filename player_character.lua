@@ -7,6 +7,10 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
   self.controls = {
     keyboard = {
       update = {
+        -- up = self.keyupdate_up,
+        -- down = self.keyupdate_down,
+        -- left = self.keyupdate_left,
+        -- right = self.keyupdate_right
       },
       pressed = {
         up = self.keypressed_up,
@@ -52,6 +56,22 @@ function PlayerCharacter:keypressed_right()
   self:request_movement(Direction.EAST)
 end
 
+function PlayerCharacter:keyupdate_up()
+  self:request_pixel_movement(Direction.NORTH)
+end
+
+function PlayerCharacter:keyupdate_down()
+  self:request_pixel_movement(Direction.SOUTH)
+end
+
+function PlayerCharacter:keyupdate_left()
+  self:request_pixel_movement(Direction.WEST)
+end
+
+function PlayerCharacter:keyupdate_right()
+  self:request_pixel_movement(Direction.EAST)
+end
+
 function PlayerCharacter:request_movement(direction)
   local current_tile = self.parent.grid:g(self.x, self.y)
   local new_tile = current_tile.siblings[direction]
@@ -61,4 +81,9 @@ function PlayerCharacter:request_movement(direction)
     self:move(direction:unpack())
     if is_func(new_tile.on_enter) then new_tile:on_enter() end
   end
+end
+
+function PlayerCharacter:request_pixel_movement(direction)
+  local dx, dy = direction:unpack()
+  self:move_by_pixel(dx * 2, dy * 2)
 end

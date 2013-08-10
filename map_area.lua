@@ -9,6 +9,8 @@ function MapArea:initialize(x, y, width, height, tile_width, tile_height)
   self.x, self.y = x, y
   self.width, self.height = width, height
   self.tile_width, self.tile_height = tile_width, tile_height
+  self.pixel_width = self.width * self.tile_width
+  self.pixel_height = self.height * self.tile_height
 
   self.render_queue = Skiplist.new(self.width * self.height * MapArea.render_queue_depth)
   self.entity_list = {}

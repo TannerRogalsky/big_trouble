@@ -30,6 +30,8 @@ function Main:render()
   self.map:render()
 
   self.camera:unset()
+
+
 end
 
 function Main:mousepressed(x, y, button)

@@ -9,7 +9,7 @@ function DialogueEntity:initialize(name, image)
 end
 
 DialogueSystem.static.entities = {
-  Anubis = DialogueEntity:new("Anubis")
+  Anubis = DialogueEntity:new("Anubis", g.newImage("images/anubis_bust.png"))
 }
 local active = false
 DialogueSystem.static.callback = nil
@@ -20,7 +20,9 @@ function DialogueSystem.say(entity, text, callback)
   g.setCanvas(c)
   g.clear()
   g.setColor(COLORS.white:rgb())
-  g.rectangle("fill", 0, 0, c:getWidth(), c:getHeight())
+  local h = c:getHeight()
+  g.draw(entity.image, 0, 0, 0, entity.image:getWidth() / c:getWidth() * 2)
+  g.rectangle("fill", h, 0, c:getWidth(), h)
   g.setColor(COLORS.black:rgb())
   g.print(text, 0, 0)
   g.setCanvas()

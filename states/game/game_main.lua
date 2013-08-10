@@ -2,6 +2,8 @@ local Main = Game:addState('Main')
 
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
+
+  self.map = MapLoader.load("template")
 end
 
 function Main:update(dt)
@@ -9,6 +11,8 @@ end
 
 function Main:render()
   self.camera:set()
+
+  self.map:render()
 
   self.camera:unset()
 end

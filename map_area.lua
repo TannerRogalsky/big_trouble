@@ -40,7 +40,11 @@ function MapArea:update(dt)
 end
 
 function MapArea:render()
-  g.draw(self.grid_canvas, self.x, self.y)
+  g.setColor(COLORS.white:rgb())
+  for _, layer in ipairs(self.tile_layers) do
+    g.draw(layer, 0, 0)
+  end
+
   for index,entity in self.render_queue:ipairs() do
     entity:render()
   end

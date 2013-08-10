@@ -1,8 +1,9 @@
 MapEntity = class('MapEntity', Base):include(Stateful)
+MapEntity:include(Movable)
 
 function MapEntity:initialize(parent, x, y, width, height, z)
   Base.initialize(self)
-  assert(instanceOf(Map, parent))
+  assert(instanceOf(MapArea, parent))
   assert(is_num(x) and is_num(y))
   assert(is_num(width) or width == nil)
   assert(is_num(height) or height == nil)

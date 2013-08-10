@@ -4,6 +4,7 @@ MapLoader.static.maps_folder = "levels/"
 function MapLoader.load(map_name)
   local path = MapLoader.maps_folder .. map_name
   local map_data = require(path)
+  local map_triggers = require(path .. "_triggers")
   local map_area = MapArea:new(0, 0, map_data.width, map_data.height, map_data.tilewidth, map_data.tileheight)
 
   -- grab the tileset info from the data and build it
@@ -49,6 +50,9 @@ function MapLoader.load(map_name)
         tile.siblings[direction] = sibling
       end
     end
+
+    tile.on_enter = map_triggers[tile_data.properties.on_enter]
+    tile.on_exit = map_triggers[tile_data.properties.on_exit]
   end
 
   -- tile layers
@@ -59,17 +63,13 @@ function MapLoader.load(map_name)
     g.setCanvas(canvas)
     local data_index = 0
     for y=0,tiles_metadata.height - 1 do
-      -- data_index = data_index - 1
       for x=0,tiles_metadata.width - 1 do
         data_index = data_index + 1
         local quad_index = tiles_metadata.data[data_index]
         local quad = tileset_quads[quad_index]
-        -- print(x, y, quad_index, quad)
 
         if quad_index ~= 0 then
-          -- print(x, y)
           g.drawq(tileset_data.image, quad, x * map_area.tile_width, y * map_area.tile_height)
-          -- g.print(quad_index, x * map_area.tile_width, y * map_area.tile_height)
         end
       end
     end

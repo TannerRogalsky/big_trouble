@@ -18,7 +18,6 @@ return {
       image = "../images/sprites.png",
       imagewidth = 512,
       imageheight = 256,
-      transparentcolor = "#ff00ff",
       properties = {},
       tiles = {}
     }
@@ -38,95 +37,6 @@ return {
       opacity = 1,
       properties = {},
       objects = {
-        {
-          name = "n_0101",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0201",
-            ["sibling_south"] = "n_0102"
-          }
-        },
-        {
-          name = "n_0102",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0202",
-            ["sibling_north"] = "n_0101",
-            ["sibling_south"] = "n_0103"
-          }
-        },
-        {
-          name = "n_0103",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0203",
-            ["sibling_north"] = "n_0102",
-            ["sibling_south"] = "n_0104"
-          }
-        },
-        {
-          name = "n_0104",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0204",
-            ["sibling_north"] = "n_0103",
-            ["sibling_south"] = "n_0105"
-          }
-        },
-        {
-          name = "n_0105",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 200,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0205",
-            ["sibling_north"] = "n_0104",
-            ["sibling_south"] = "n_0106"
-          }
-        },
-        {
-          name = "n_0106",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 250,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0206",
-            ["sibling_north"] = "n_0105",
-            ["sibling_south"] = "n_0107"
-          }
-        },
         {
           name = "n_0107",
           type = "",
@@ -244,101 +154,6 @@ return {
           properties = {
             ["sibling_east"] = "n_0214",
             ["sibling_north"] = "n_0113"
-          }
-        },
-        {
-          name = "n_0201",
-          type = "",
-          shape = "rectangle",
-          x = 50,
-          y = 0,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0301",
-            ["sibling_south"] = "n_0202",
-            ["sibling_west"] = "n_0101"
-          }
-        },
-        {
-          name = "n_0202",
-          type = "",
-          shape = "rectangle",
-          x = 50,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0302",
-            ["sibling_north"] = "n_0201",
-            ["sibling_south"] = "n_0203",
-            ["sibling_west"] = "n_0102"
-          }
-        },
-        {
-          name = "n_0203",
-          type = "",
-          shape = "rectangle",
-          x = 50,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0303",
-            ["sibling_north"] = "n_0202",
-            ["sibling_south"] = "n_0204",
-            ["sibling_west"] = "n_0103"
-          }
-        },
-        {
-          name = "n_0204",
-          type = "",
-          shape = "rectangle",
-          x = 50,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0304",
-            ["sibling_north"] = "n_0203",
-            ["sibling_south"] = "n_0205",
-            ["sibling_west"] = "n_0104"
-          }
-        },
-        {
-          name = "n_0205",
-          type = "",
-          shape = "rectangle",
-          x = 50,
-          y = 200,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0305",
-            ["sibling_north"] = "n_0204",
-            ["sibling_south"] = "n_0206",
-            ["sibling_west"] = "n_0105"
-          }
-        },
-        {
-          name = "n_0206",
-          type = "",
-          shape = "rectangle",
-          x = 50,
-          y = 250,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0306",
-            ["sibling_north"] = "n_0205",
-            ["sibling_south"] = "n_0207",
-            ["sibling_west"] = "n_0106"
           }
         },
         {
@@ -481,70 +296,6 @@ return {
             ["sibling_east"] = "n_0401",
             ["sibling_south"] = "n_0302",
             ["sibling_west"] = "n_0201"
-          }
-        },
-        {
-          name = "n_0302",
-          type = "",
-          shape = "rectangle",
-          x = 100,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0402",
-            ["sibling_north"] = "n_0301",
-            ["sibling_south"] = "n_0303",
-            ["sibling_west"] = "n_0202"
-          }
-        },
-        {
-          name = "n_0303",
-          type = "",
-          shape = "rectangle",
-          x = 100,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0403",
-            ["sibling_north"] = "n_0302",
-            ["sibling_south"] = "n_0304",
-            ["sibling_west"] = "n_0203"
-          }
-        },
-        {
-          name = "n_0304",
-          type = "",
-          shape = "rectangle",
-          x = 100,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0404",
-            ["sibling_north"] = "n_0303",
-            ["sibling_south"] = "n_0305",
-            ["sibling_west"] = "n_0204"
-          }
-        },
-        {
-          name = "n_0305",
-          type = "",
-          shape = "rectangle",
-          x = 100,
-          y = 200,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0405",
-            ["sibling_north"] = "n_0304",
-            ["sibling_south"] = "n_0306",
-            ["sibling_west"] = "n_0205"
           }
         },
         {
@@ -706,70 +457,6 @@ return {
           }
         },
         {
-          name = "n_0402",
-          type = "",
-          shape = "rectangle",
-          x = 150,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0502",
-            ["sibling_north"] = "n_0401",
-            ["sibling_south"] = "n_0403",
-            ["sibling_west"] = "n_0302"
-          }
-        },
-        {
-          name = "n_0403",
-          type = "",
-          shape = "rectangle",
-          x = 150,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0503",
-            ["sibling_north"] = "n_0402",
-            ["sibling_south"] = "n_0404",
-            ["sibling_west"] = "n_0303"
-          }
-        },
-        {
-          name = "n_0404",
-          type = "",
-          shape = "rectangle",
-          x = 150,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0504",
-            ["sibling_north"] = "n_0403",
-            ["sibling_south"] = "n_0405",
-            ["sibling_west"] = "n_0304"
-          }
-        },
-        {
-          name = "n_0405",
-          type = "",
-          shape = "rectangle",
-          x = 150,
-          y = 200,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0505",
-            ["sibling_north"] = "n_0404",
-            ["sibling_south"] = "n_0406",
-            ["sibling_west"] = "n_0305"
-          }
-        },
-        {
           name = "n_0406",
           type = "",
           shape = "rectangle",
@@ -925,38 +612,6 @@ return {
             ["sibling_east"] = "n_0601",
             ["sibling_south"] = "n_0502",
             ["sibling_west"] = "n_0401"
-          }
-        },
-        {
-          name = "n_0502",
-          type = "",
-          shape = "rectangle",
-          x = 200,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0602",
-            ["sibling_north"] = "n_0501",
-            ["sibling_south"] = "n_0503",
-            ["sibling_west"] = "n_0402"
-          }
-        },
-        {
-          name = "n_0503",
-          type = "",
-          shape = "rectangle",
-          x = 200,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0603",
-            ["sibling_north"] = "n_0502",
-            ["sibling_south"] = "n_0504",
-            ["sibling_west"] = "n_0403"
           }
         },
         {
@@ -1150,38 +805,6 @@ return {
           }
         },
         {
-          name = "n_0602",
-          type = "",
-          shape = "rectangle",
-          x = 250,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0702",
-            ["sibling_north"] = "n_0601",
-            ["sibling_south"] = "n_0603",
-            ["sibling_west"] = "n_0502"
-          }
-        },
-        {
-          name = "n_0603",
-          type = "",
-          shape = "rectangle",
-          x = 250,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0703",
-            ["sibling_north"] = "n_0602",
-            ["sibling_south"] = "n_0604",
-            ["sibling_west"] = "n_0503"
-          }
-        },
-        {
           name = "n_0604",
           type = "",
           shape = "rectangle",
@@ -1366,6 +989,8 @@ return {
           height = 50,
           visible = true,
           properties = {
+            ["on_enter"] = "test_enter_function",
+            ["on_exit"] = "test_exit_function",
             ["sibling_east"] = "n_0801",
             ["sibling_south"] = "n_0702",
             ["sibling_west"] = "n_0601"
@@ -1610,38 +1235,6 @@ return {
           }
         },
         {
-          name = "n_0803",
-          type = "",
-          shape = "rectangle",
-          x = 350,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0903",
-            ["sibling_north"] = "n_0802",
-            ["sibling_south"] = "n_0804",
-            ["sibling_west"] = "n_0703"
-          }
-        },
-        {
-          name = "n_0804",
-          type = "",
-          shape = "rectangle",
-          x = 350,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_0904",
-            ["sibling_north"] = "n_0803",
-            ["sibling_south"] = "n_0805",
-            ["sibling_west"] = "n_0704"
-          }
-        },
-        {
           name = "n_0805",
           type = "",
           shape = "rectangle",
@@ -1832,38 +1425,6 @@ return {
           }
         },
         {
-          name = "n_0903",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1003",
-            ["sibling_north"] = "n_0902",
-            ["sibling_south"] = "n_0904",
-            ["sibling_west"] = "n_0803"
-          }
-        },
-        {
-          name = "n_0904",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1004",
-            ["sibling_north"] = "n_0903",
-            ["sibling_south"] = "n_0905",
-            ["sibling_west"] = "n_0804"
-          }
-        },
-        {
           name = "n_0905",
           type = "",
           shape = "rectangle",
@@ -2038,70 +1599,6 @@ return {
           }
         },
         {
-          name = "n_1002",
-          type = "",
-          shape = "rectangle",
-          x = 450,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1102",
-            ["sibling_north"] = "n_1001",
-            ["sibling_south"] = "n_1003",
-            ["sibling_west"] = "n_0902"
-          }
-        },
-        {
-          name = "n_1003",
-          type = "",
-          shape = "rectangle",
-          x = 450,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1103",
-            ["sibling_north"] = "n_1002",
-            ["sibling_south"] = "n_1004",
-            ["sibling_west"] = "n_0903"
-          }
-        },
-        {
-          name = "n_1004",
-          type = "",
-          shape = "rectangle",
-          x = 450,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1104",
-            ["sibling_north"] = "n_1003",
-            ["sibling_south"] = "n_1005",
-            ["sibling_west"] = "n_0904"
-          }
-        },
-        {
-          name = "n_1005",
-          type = "",
-          shape = "rectangle",
-          x = 450,
-          y = 200,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1105",
-            ["sibling_north"] = "n_1004",
-            ["sibling_south"] = "n_1006",
-            ["sibling_west"] = "n_0905"
-          }
-        },
-        {
           name = "n_1006",
           type = "",
           shape = "rectangle",
@@ -2257,70 +1754,6 @@ return {
             ["sibling_east"] = "n_1201",
             ["sibling_south"] = "n_1102",
             ["sibling_west"] = "n_1001"
-          }
-        },
-        {
-          name = "n_1102",
-          type = "",
-          shape = "rectangle",
-          x = 500,
-          y = 50,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1202",
-            ["sibling_north"] = "n_1101",
-            ["sibling_south"] = "n_1103",
-            ["sibling_west"] = "n_1002"
-          }
-        },
-        {
-          name = "n_1103",
-          type = "",
-          shape = "rectangle",
-          x = 500,
-          y = 100,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1203",
-            ["sibling_north"] = "n_1102",
-            ["sibling_south"] = "n_1104",
-            ["sibling_west"] = "n_1003"
-          }
-        },
-        {
-          name = "n_1104",
-          type = "",
-          shape = "rectangle",
-          x = 500,
-          y = 150,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1204",
-            ["sibling_north"] = "n_1103",
-            ["sibling_south"] = "n_1105",
-            ["sibling_west"] = "n_1004"
-          }
-        },
-        {
-          name = "n_1105",
-          type = "",
-          shape = "rectangle",
-          x = 500,
-          y = 200,
-          width = 50,
-          height = 50,
-          visible = true,
-          properties = {
-            ["sibling_east"] = "n_1205",
-            ["sibling_north"] = "n_1104",
-            ["sibling_south"] = "n_1106",
-            ["sibling_west"] = "n_1005"
           }
         },
         {
@@ -3133,15 +2566,15 @@ return {
       encoding = "lua",
       data = {
         1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        11, 12, 5, 6, 25, 26, 0, 0, 0, 0, 0, 0, 0, 0,
-        1, 2, 15, 16, 35, 36, 0, 0, 0, 0, 0, 0, 0, 0,
-        11, 12, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        1, 2, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0,
-        44, 45, 46, 47, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0,
-        44, 45, 46, 47, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0,
+        11, 12, 25, 26, 23, 24, 0, 0, 0, 7, 8, 0, 0, 0,
+        1, 2, 35, 36, 23, 24, 0, 7, 8, 17, 18, 0, 0, 0,
+        11, 12, 25, 26, 0, 0, 0, 17, 18, 5, 6, 0, 0, 0,
+        3, 4, 35, 36, 0, 0, 0, 0, 0, 15, 16, 0, 0, 0,
+        13, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,

@@ -4,9 +4,12 @@ function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
   self.map = MapLoader.load("template2")
+  self.character = PlayerCharacter:new(self.map, 10, 10, 1, 1)
+  self.map:add_entity(self.character)
 end
 
 function Main:update(dt)
+  self.character:update(dt)
 end
 
 function Main:render()
@@ -24,6 +27,7 @@ function Main:mousereleased(x, y, button)
 end
 
 function Main:keypressed(key, unicode)
+  self.character:keypressed(key, unicode)
 end
 
 function Main:keyreleased(key, unicode)

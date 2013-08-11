@@ -9,22 +9,36 @@ function DialogueEntity:initialize(name, image)
 end
 
 DialogueSystem.static.entities = {
-  Anubis = DialogueEntity:new("Anubis", g.newImage("images/anubis_bust.png"))
+  Anubis = DialogueEntity:new("Anubis", g.newImage("images/anubis_bust.png")),
+  Maat = DialogueEntity:new("Ma'at", g.newImage("images/maat_bust.png")),
+  Set = DialogueEntity:new("Set", g.newImage("images/set_bust.png")),
+  Ammit = DialogueEntity:new("Ammit", g.newImage("images/ammit_bust.png"))
 }
 local active = false
-DialogueSystem.static.callback = nil
+DialogueSystem.static.callbacks = nil
 DialogueSystem.static.render_surface = g.newCanvas(g.getWidth(), g.getHeight() / 3)
 
-function DialogueSystem.say(entity, text, callback)
+function DialogueSystem.say(entity, text, callbacks)
   local c = DialogueSystem.render_surface
   g.setCanvas(c)
-  g.clear()
   g.setColor(COLORS.white:rgb())
   local h = c:getHeight()
-  g.draw(entity.image, 0, 0, 0, entity.image:getWidth() / c:getWidth() * 2)
+  g.draw(entity.image, 0, 0, 0, h / entity.image:getWidth())
   g.rectangle("fill", h, 0, c:getWidth(), h)
   g.setColor(COLORS.black:rgb())
-  g.print(text, 0, 0)
+
+  h = h + 10
+  g.print(entity.name .. ": " .. text, h, 0)
+
+  DialogueSystem.callbacks = callbacks
+  if DialogueSystem.callbacks then
+    local index = 1
+    for key,callback_table in pairs(DialogueSystem.callbacks) do
+      g.print(key .. ". " .. callback_table.text, h, index * 20)
+      index = index + 1
+    end
+  end
+
   g.setCanvas()
 
   active = true
@@ -38,7 +52,12 @@ function DialogueSystem.render()
 end
 
 function DialogueSystem.update(dt)
+end
 
+function DialogueSystem.keypressed(key, unicode)
+  if DialogueSystem.callbacks and DialogueSystem.callbacks[key] then
+    DialogueSystem.callbacks[key].action()
+  end
 end
 
 function DialogueSystem.clear()

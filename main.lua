@@ -25,6 +25,7 @@ end
 function love.keypressed(key, unicode)
   game:keypressed(key, unicode)
   loveframes.keypressed(key, unicode)
+  DialogueSystem.keypressed(key, unicode)
 
   if key == "escape" then
     love.event.push("quit")

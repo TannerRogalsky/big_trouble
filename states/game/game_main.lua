@@ -3,15 +3,15 @@ local Main = Game:addState('Main')
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
-  self.map = MapLoader.load("template3")
+  self.map = MapLoader.load("level1")
 
   self.camera:setScale(0.25, 0.25)
 
   local cbounds = self.camera.bounds
-  cbounds.negative_x = 0
-  cbounds.negative_y = 0
-  cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
-  cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
+  -- cbounds.negative_x = 0
+  -- cbounds.negative_y = 0
+  -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
+  -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
   self.character = PlayerCharacter:new(self.map, 10, 10, 1, 1)
   self.map:add_entity(self.character)

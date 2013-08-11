@@ -60,6 +60,7 @@ function MapLoader.load(map_name)
   g.setColor(COLORS.white:rgb())
   for name, tiles_metadata in pairs(layers.tilelayer) do
     local canvas = g.newCanvas(map_area.width * map_area.tile_width, map_area.height * map_area.tile_height)
+    canvas:setFilter("nearest", "nearest")
     g.setCanvas(canvas)
     local data_index = 0
     for y=0,tiles_metadata.height - 1 do

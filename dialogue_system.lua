@@ -19,6 +19,8 @@ DialogueSystem.static.callbacks = nil
 DialogueSystem.static.render_surface = g.newCanvas(g.getWidth(), g.getHeight() / 3)
 
 function DialogueSystem.say(entity, text, callbacks)
+  game.character:gotoState("NotMoving")
+
   local c = DialogueSystem.render_surface
   g.setCanvas(c)
   g.setColor(COLORS.white:rgb())
@@ -61,6 +63,7 @@ function DialogueSystem.keypressed(key, unicode)
 end
 
 function DialogueSystem.clear()
+  game.character:gotoState()
   DialogueSystem.render_surface:clear()
   active = false
 end

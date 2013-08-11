@@ -8,13 +8,17 @@ function Main:enteredState()
   self.camera:setScale(0.25, 0.25)
 
   local cbounds = self.camera.bounds
-  -- cbounds.negative_x = 0
-  -- cbounds.negative_y = 0
+  cbounds.negative_x = 0
+  cbounds.negative_y = 0
   -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
   -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
-  self.character = PlayerCharacter:new(self.map, 10, 10, 1, 1)
+  self.character = PlayerCharacter:new(self.map, 3, 2, 1, 1)
   self.map:add_entity(self.character)
+
+  local bg_music = love.audio.newSource("sounds/bg_music.ogg")
+  bg_music:play()
+  bg_music:setLooping(true)
 end
 
 function Main:update(dt)

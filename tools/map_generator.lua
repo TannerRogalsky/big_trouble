@@ -50,6 +50,8 @@ local function template_map(x, y, w, h)
           output = output .. newline([[    <property name="sibling_]] .. direction_name .. [[" value="n_]] .. sibling_coord .. [["/>]])
         end
       end
+      output = output .. newline([[     <property name="on_enter" value=""/>]])
+      output = output .. newline([[     <property name="on_exit" value=""/>]])
       output = output .. newline([[   </properties>]])
 
       output = output .. newline([[  </object>]])

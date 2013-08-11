@@ -1,77 +1,83 @@
 local triggers = {}
 
-function triggers.anubis_woo(tile)
+function triggers.anubis_welcome(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
-  DialogueSystem.say(DialogueSystem.entities.Anubis, "test", {
-    ["1"] = {
-      text = "To woo?",
+  DialogueSystem.say(DialogueSystem.entities.Anubis,
+    "Welcome to the underworld, mortal. You will need to navigate these trials before you are allowed into the afterlife.", {
+    [" "] = {
+      text = "Press Space to continue.",
       action = function()
-        print("woo")
-      end
-    },
-    ["2"] = {
-      text = "Or not to woo?",
-      action = function()
-        print("not woo")
+        DialogueSystem.clear()
       end
     }
   })
 end
 
-function triggers.close_dialog(tile)
+function triggers.anubis_warn(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
-  DialogueSystem.clear()
-end
-
-function triggers.maat_woo(tile)
-  local player = tile:get_first_content_of_type(PlayerCharacter)
-  DialogueSystem.say(DialogueSystem.entities.Maat, "test", {
-    ["1"] = {
-      text = "To woo?",
+  DialogueSystem.say(DialogueSystem.entities.Anubis,
+    "Some Gods will help you along your journey. But some (like Set) will try to trick you.", {
+    [" "] = {
+      text = "Press Space to continue.",
       action = function()
-        print("woo")
-      end
-    },
-    ["2"] = {
-      text = "Or not to woo?",
-      action = function()
-        print("not woo")
+        DialogueSystem.clear()
       end
     }
   })
 end
 
-function triggers.ammit_woo(tile)
+function triggers.set_threat(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
-  DialogueSystem.say(DialogueSystem.entities.Ammit, "test", {
+  DialogueSystem.say(DialogueSystem.entities.Set, "I AM SET. GOD OF CHAOS. WORSHIP ME IF YOU WANT TO SAVE YOUR SOUL.", {
     ["1"] = {
-      text = "To woo?",
+      text = "Plee with Osiris for protection from Set.",
       action = function()
-        print("woo")
-      end
-    },
-    ["2"] = {
-      text = "Or not to woo?",
-      action = function()
-        print("not woo")
+        DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Set, "NOOOOOOOOO!", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
       end
     }
   })
 end
 
-function triggers.set_woo(tile)
+function triggers.maat_judgement(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
-  DialogueSystem.say(DialogueSystem.entities.Set, "test", {
+  DialogueSystem.say(DialogueSystem.entities.Maat,
+    "Your heart will now be weighed.", {
     ["1"] = {
-      text = "To woo?",
+      text = "Thank you, Goddess Ma'at.",
       action = function()
-        print("woo")
+        DialogueSystem.say(DialogueSystem.entities.Ammit,
+          "YOU HAVE LEAD A SINFUL LIFE AND NOW I WILL EAT YOUR HEART.", {
+          [" "] = {
+            text = "Press Space to have your heart eaten.",
+            action = function()
+              DialogueSystem.clear()
+              game:gotoState("Lose")
+            end
+          }
+        })
       end
     },
     ["2"] = {
-      text = "Or not to woo?",
+      text = "Lighten the weight of your heart with a spell from the Book of the Dead.",
       action = function()
-        print("not woo")
+        DialogueSystem.say(DialogueSystem.entities.Maat,
+          "You have lead a virtuous life, mortal. Welcome to the afterlife.", {
+          [" "] = {
+            text = "Press Space to go to the afterlife.",
+            action = function()
+              DialogueSystem.clear()
+              game:gotoState("Win")
+            end
+          }
+        })
       end
     }
   })

@@ -17,6 +17,14 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
 
   self.heart_weight = 1
 
+  self.animations = {}
+  for index, direction in ipairs(Direction.list) do
+    local image = g.newImage("images/characterwalk/walk" .. direction.cardinal_name:lower() .. ".png")
+    image:setFilter("nearest", "nearest")
+    self.animations[direction] = newAnimation(image, 16, 16, 0.1, 4)
+  end
+  self.animation = self.animations[Direction.NORTH]
+
   self.controls = {
     keyboard = {
       update = {
@@ -40,6 +48,9 @@ function PlayerCharacter:update(dt)
   for key,action in pairs(actions) do
     if love.keyboard.isDown(key) then action(self) end
   end
+  if self.movement_tween then
+    self.animation:update(dt)
+  end
 end
 
 function PlayerCharacter:keypressed(key, unicode)
@@ -50,7 +61,8 @@ end
 function PlayerCharacter:render()
   local x, y, width, height = self:world_bounds()
   g.setColor(COLORS.white:rgb())
-  g.draw(self.render_surface, x + width / 2, y + height / 2, self.angle, 1, 1, width / 2, height / 2)
+  -- g.draw(self.render_surface, x + width / 2, y + height / 2, self.angle, 1, 1, width / 2, height / 2)
+  self.animation:draw(x, y)
 end
 
 
@@ -91,6 +103,7 @@ function PlayerCharacter:request_movement(direction)
   local new_tile = current_tile.siblings[direction]
 
   if new_tile and self.movement_tween == nil then
+    self.animation = self.animations[direction]
     if is_func(current_tile.on_exit) then current_tile:on_exit() end
     -- self:move(direction:unpack())
 
@@ -111,6 +124,9 @@ function PlayerCharacter:request_movement(direction)
         if is_func(new_tile.on_enter) then new_tile:on_enter() end
       end)
     end
+  elseif self.movement_tween == nil then
+    self.angle = math.atan2(direction.y, direction.x) + math.pi / 2
+    self.animation = self.animations[direction]
   end
 end
 

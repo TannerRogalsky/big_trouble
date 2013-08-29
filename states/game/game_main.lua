@@ -16,8 +16,11 @@ function Main:enteredState()
   self.character = PlayerCharacter:new(self.map, 3, 2, 1, 1)
   self.map:add_entity(self.character)
 
+  self.overlay = g.newCanvas(g.getWidth(), g.getHeight())
+  self.light = g.newImage("images/gradient_overlay.png")
+
   local bg_music = love.audio.newSource("sounds/bg_music.ogg")
-  bg_music:play()
+  -- bg_music:play()
   bg_music:setLooping(true)
 end
 
@@ -35,7 +38,21 @@ function Main:render()
 
   self.camera:unset()
 
+  self.overlay:clear()
+  g.setCanvas(self.overlay)
 
+  g.setColor(COLORS.black:rgb())
+  g.rectangle("fill", 0, 0, g.getWidth(), g.getHeight())
+
+  g.setColor(COLORS.white:rgb())
+  g.draw(self.light, cx / 0.25 - 96, cy / 0.25 - 96)
+
+  g.draw(self.light, 200, 200)
+  g.setCanvas()
+
+  g.setBlendMode("multiplicative")
+  g.draw(self.overlay)
+  g.setBlendMode("alpha")
 end
 
 function Main:mousepressed(x, y, button)

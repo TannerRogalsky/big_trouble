@@ -46,7 +46,10 @@ function Main:render()
 
   g.setColor(COLORS.white:rgb())
   g.setStencil(function()
-    g.polygon("fill", cx / 0.25 + 16 / 0.5, cy / 0.25 + 16 / 0.5, 0, 0, 300, 0)
+    -- g.polygon("fill", cx / 0.25 + 16 / 0.5, cy / 0.25 + 16 / 0.5, 0, 0, 300, 0)
+    for _,mask in ipairs(self.map.tile_light_mask) do
+      g.rectangle("fill", mask.x / 0.25 - self.camera.x / 0.25, mask.y / 0.25 - self.camera.y / 0.25, mask.width / 0.25, mask.height / 0.25)
+    end
   end)
   local iw, ih = self.light:getWidth(), self.light:getHeight()
   g.draw(self.light, cx / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, cy / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)

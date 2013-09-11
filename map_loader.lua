@@ -36,6 +36,7 @@ function MapLoader.load(map_name)
     nodes[tile_data.name] = tile_data
   end
 
+  map_area.tile_light_mask = {}
   for index,tile_data in ipairs(layers.objectgroup["Nodes"].objects) do
     local grid_x, grid_y = tile_data.x / map_data.tilewidth + 1, tile_data.y / map_data.tileheight + 1
     local tile = map_area.grid:g(grid_x, grid_y)
@@ -53,6 +54,8 @@ function MapLoader.load(map_name)
 
     tile.on_enter = map_triggers[tile_data.properties.on_enter]
     tile.on_exit = map_triggers[tile_data.properties.on_exit]
+
+    table.insert(map_area.tile_light_mask, {x =  (grid_x - 1) * map_area.tile_width, y = (grid_y - 1) * map_area.tile_height, width = map_area.tile_width, height = map_area.tile_height})
   end
 
   -- tile layers

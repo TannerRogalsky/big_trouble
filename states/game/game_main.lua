@@ -13,16 +13,21 @@ function Main:enteredState()
   -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
   -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
-  self.character = PlayerCharacter:new(self.map, 13, 2, 1, 1)
+  self.character = PlayerCharacter:new(self.map, 68, 48, 1, 1)
   self.map:add_entity(self.character)
 
   self.overlay = g.newCanvas(g.getWidth(), g.getHeight())
-  self.light = g.newImage("images/gradient_overlay.png")
+  self.light = game.preloaded_image["gradient_overlay.png"]
 
   self.torch_animations = {
     left = newAnimation(game.preloaded_image["torch_left.png"], 16, 16, 0.1, 8),
     middle = newAnimation(game.preloaded_image["torch_middle.png"], 16, 16, 0.1, 8),
     right = newAnimation(game.preloaded_image["torch_right.png"], 16, 16, 0.1, 8)
+  }
+
+  self.lights = {
+    square = game.preloaded_image["square.png"],
+    circle = game.preloaded_image["gradient_overlay.png"]
   }
 
   local bg_music = love.audio.newSource("sounds/bg_music.ogg")
@@ -72,6 +77,13 @@ function Main:render()
       local x, y = torch.x, torch.y
       g.draw(self.light, x / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, y / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
     end
+  end
+
+  for _,light in ipairs(self.map.lights) do
+    local x, y = light.x, light.y
+    local i = self.lights[light.light_type]
+    local iw, ih = i:getWidth(), i:getHeight()
+    g.draw(i, x / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, y / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
   end
 
   -- g.setColor(COLORS.blue:rgb())

@@ -13795,6 +13795,7 @@
   </object>
   <object name="n_1620" x="240" y="304" width="16" height="16">
    <properties>
+    <property name="light" value="circle"/>
     <property name="not_walkable" value="true"/>
     <property name="on_enter" value=""/>
     <property name="on_exit" value=""/>
@@ -52906,66 +52907,6 @@
     <property name="sibling_west" value="n_5848"/>
    </properties>
   </object>
-  <object name="n_5950" x="928" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6050"/>
-    <property name="sibling_north" value="n_5949"/>
-    <property name="sibling_south" value="n_5951"/>
-    <property name="sibling_west" value="n_5850"/>
-   </properties>
-  </object>
-  <object name="n_5951" x="928" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6051"/>
-    <property name="sibling_north" value="n_5950"/>
-    <property name="sibling_south" value="n_5952"/>
-    <property name="sibling_west" value="n_5851"/>
-   </properties>
-  </object>
-  <object name="n_5953" x="928" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6053"/>
-    <property name="sibling_north" value="n_5952"/>
-    <property name="sibling_south" value="n_5954"/>
-    <property name="sibling_west" value="n_5853"/>
-   </properties>
-  </object>
-  <object name="n_5954" x="928" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6054"/>
-    <property name="sibling_north" value="n_5953"/>
-    <property name="sibling_south" value="n_5955"/>
-    <property name="sibling_west" value="n_5854"/>
-   </properties>
-  </object>
-  <object name="n_5955" x="928" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6055"/>
-    <property name="sibling_north" value="n_5954"/>
-    <property name="sibling_south" value="n_5956"/>
-    <property name="sibling_west" value="n_5855"/>
-   </properties>
-  </object>
-  <object name="n_5956" x="928" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6056"/>
-    <property name="sibling_north" value="n_5955"/>
-    <property name="sibling_south" value="n_5957"/>
-    <property name="sibling_west" value="n_5856"/>
-   </properties>
-  </object>
   <object name="n_5958" x="928" y="912" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -53844,86 +53785,6 @@
     <property name="sibling_west" value="n_5948"/>
    </properties>
   </object>
-  <object name="n_6049" x="944" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6149"/>
-    <property name="sibling_north" value="n_6048"/>
-    <property name="sibling_south" value="n_6050"/>
-    <property name="sibling_west" value="n_5949"/>
-   </properties>
-  </object>
-  <object name="n_6050" x="944" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6150"/>
-    <property name="sibling_north" value="n_6049"/>
-    <property name="sibling_south" value="n_6051"/>
-    <property name="sibling_west" value="n_5950"/>
-   </properties>
-  </object>
-  <object name="n_6051" x="944" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6151"/>
-    <property name="sibling_north" value="n_6050"/>
-    <property name="sibling_south" value="n_6052"/>
-    <property name="sibling_west" value="n_5951"/>
-   </properties>
-  </object>
-  <object name="n_6052" x="944" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6152"/>
-    <property name="sibling_north" value="n_6051"/>
-    <property name="sibling_south" value="n_6053"/>
-    <property name="sibling_west" value="n_5952"/>
-   </properties>
-  </object>
-  <object name="n_6053" x="944" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6153"/>
-    <property name="sibling_north" value="n_6052"/>
-    <property name="sibling_south" value="n_6054"/>
-    <property name="sibling_west" value="n_5953"/>
-   </properties>
-  </object>
-  <object name="n_6054" x="944" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6154"/>
-    <property name="sibling_north" value="n_6053"/>
-    <property name="sibling_south" value="n_6055"/>
-    <property name="sibling_west" value="n_5954"/>
-   </properties>
-  </object>
-  <object name="n_6055" x="944" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6155"/>
-    <property name="sibling_north" value="n_6054"/>
-    <property name="sibling_south" value="n_6056"/>
-    <property name="sibling_west" value="n_5955"/>
-   </properties>
-  </object>
-  <object name="n_6056" x="944" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6156"/>
-    <property name="sibling_north" value="n_6055"/>
-    <property name="sibling_south" value="n_6057"/>
-    <property name="sibling_west" value="n_5956"/>
-   </properties>
-  </object>
   <object name="n_6058" x="944" y="912" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -54732,76 +54593,6 @@
     <property name="sibling_west" value="n_6048"/>
    </properties>
   </object>
-  <object name="n_6150" x="960" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6250"/>
-    <property name="sibling_north" value="n_6149"/>
-    <property name="sibling_south" value="n_6151"/>
-    <property name="sibling_west" value="n_6050"/>
-   </properties>
-  </object>
-  <object name="n_6151" x="960" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6251"/>
-    <property name="sibling_north" value="n_6150"/>
-    <property name="sibling_south" value="n_6152"/>
-    <property name="sibling_west" value="n_6051"/>
-   </properties>
-  </object>
-  <object name="n_6152" x="960" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6252"/>
-    <property name="sibling_north" value="n_6151"/>
-    <property name="sibling_south" value="n_6153"/>
-    <property name="sibling_west" value="n_6052"/>
-   </properties>
-  </object>
-  <object name="n_6153" x="960" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6253"/>
-    <property name="sibling_north" value="n_6152"/>
-    <property name="sibling_south" value="n_6154"/>
-    <property name="sibling_west" value="n_6053"/>
-   </properties>
-  </object>
-  <object name="n_6154" x="960" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6254"/>
-    <property name="sibling_north" value="n_6153"/>
-    <property name="sibling_south" value="n_6155"/>
-    <property name="sibling_west" value="n_6054"/>
-   </properties>
-  </object>
-  <object name="n_6155" x="960" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6255"/>
-    <property name="sibling_north" value="n_6154"/>
-    <property name="sibling_south" value="n_6156"/>
-    <property name="sibling_west" value="n_6055"/>
-   </properties>
-  </object>
-  <object name="n_6156" x="960" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6256"/>
-    <property name="sibling_north" value="n_6155"/>
-    <property name="sibling_south" value="n_6157"/>
-    <property name="sibling_west" value="n_6056"/>
-   </properties>
-  </object>
   <object name="n_6167" x="960" y="1056" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -55573,26 +55364,6 @@
     <property name="sibling_west" value="n_6148"/>
    </properties>
   </object>
-  <object name="n_6249" x="976" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6349"/>
-    <property name="sibling_north" value="n_6248"/>
-    <property name="sibling_south" value="n_6250"/>
-    <property name="sibling_west" value="n_6149"/>
-   </properties>
-  </object>
-  <object name="n_6250" x="976" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6350"/>
-    <property name="sibling_north" value="n_6249"/>
-    <property name="sibling_south" value="n_6251"/>
-    <property name="sibling_west" value="n_6150"/>
-   </properties>
-  </object>
   <object name="n_6251" x="976" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -55621,16 +55392,6 @@
     <property name="sibling_north" value="n_6252"/>
     <property name="sibling_south" value="n_6254"/>
     <property name="sibling_west" value="n_6153"/>
-   </properties>
-  </object>
-  <object name="n_6254" x="976" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6354"/>
-    <property name="sibling_north" value="n_6253"/>
-    <property name="sibling_south" value="n_6255"/>
-    <property name="sibling_west" value="n_6154"/>
    </properties>
   </object>
   <object name="n_6255" x="976" y="864" width="16" height="16">
@@ -56491,16 +56252,6 @@
     <property name="sibling_west" value="n_6248"/>
    </properties>
   </object>
-  <object name="n_6350" x="992" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6450"/>
-    <property name="sibling_north" value="n_6349"/>
-    <property name="sibling_south" value="n_6351"/>
-    <property name="sibling_west" value="n_6250"/>
-   </properties>
-  </object>
   <object name="n_6351" x="992" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -56511,36 +56262,6 @@
     <property name="sibling_west" value="n_6251"/>
    </properties>
   </object>
-  <object name="n_6352" x="992" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6452"/>
-    <property name="sibling_north" value="n_6351"/>
-    <property name="sibling_south" value="n_6353"/>
-    <property name="sibling_west" value="n_6252"/>
-   </properties>
-  </object>
-  <object name="n_6353" x="992" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6453"/>
-    <property name="sibling_north" value="n_6352"/>
-    <property name="sibling_south" value="n_6354"/>
-    <property name="sibling_west" value="n_6253"/>
-   </properties>
-  </object>
-  <object name="n_6354" x="992" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6454"/>
-    <property name="sibling_north" value="n_6353"/>
-    <property name="sibling_south" value="n_6355"/>
-    <property name="sibling_west" value="n_6254"/>
-   </properties>
-  </object>
   <object name="n_6355" x="992" y="864" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -56549,16 +56270,6 @@
     <property name="sibling_north" value="n_6354"/>
     <property name="sibling_south" value="n_6356"/>
     <property name="sibling_west" value="n_6255"/>
-   </properties>
-  </object>
-  <object name="n_6356" x="992" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6456"/>
-    <property name="sibling_north" value="n_6355"/>
-    <property name="sibling_south" value="n_6357"/>
-    <property name="sibling_west" value="n_6256"/>
    </properties>
   </object>
   <object name="n_6357" x="992" y="896" width="16" height="16">
@@ -57400,16 +57111,6 @@
     <property name="sibling_west" value="n_6344"/>
    </properties>
   </object>
-  <object name="n_6450" x="1008" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6550"/>
-    <property name="sibling_north" value="n_6449"/>
-    <property name="sibling_south" value="n_6451"/>
-    <property name="sibling_west" value="n_6350"/>
-   </properties>
-  </object>
   <object name="n_6451" x="1008" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -57418,16 +57119,6 @@
     <property name="sibling_north" value="n_6450"/>
     <property name="sibling_south" value="n_6452"/>
     <property name="sibling_west" value="n_6351"/>
-   </properties>
-  </object>
-  <object name="n_6452" x="1008" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6552"/>
-    <property name="sibling_north" value="n_6451"/>
-    <property name="sibling_south" value="n_6453"/>
-    <property name="sibling_west" value="n_6352"/>
    </properties>
   </object>
   <object name="n_6453" x="1008" y="832" width="16" height="16">
@@ -57458,16 +57149,6 @@
     <property name="sibling_north" value="n_6454"/>
     <property name="sibling_south" value="n_6456"/>
     <property name="sibling_west" value="n_6355"/>
-   </properties>
-  </object>
-  <object name="n_6456" x="1008" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6556"/>
-    <property name="sibling_north" value="n_6455"/>
-    <property name="sibling_south" value="n_6457"/>
-    <property name="sibling_west" value="n_6356"/>
    </properties>
   </object>
   <object name="n_6457" x="1008" y="896" width="16" height="16">
@@ -58208,16 +57889,6 @@
     <property name="sibling_west" value="n_6449"/>
    </properties>
   </object>
-  <object name="n_6550" x="1024" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6650"/>
-    <property name="sibling_north" value="n_6549"/>
-    <property name="sibling_south" value="n_6551"/>
-    <property name="sibling_west" value="n_6450"/>
-   </properties>
-  </object>
   <object name="n_6551" x="1024" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -58228,16 +57899,6 @@
     <property name="sibling_west" value="n_6451"/>
    </properties>
   </object>
-  <object name="n_6552" x="1024" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6652"/>
-    <property name="sibling_north" value="n_6551"/>
-    <property name="sibling_south" value="n_6553"/>
-    <property name="sibling_west" value="n_6452"/>
-   </properties>
-  </object>
   <object name="n_6553" x="1024" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -58246,36 +57907,6 @@
     <property name="sibling_north" value="n_6552"/>
     <property name="sibling_south" value="n_6554"/>
     <property name="sibling_west" value="n_6453"/>
-   </properties>
-  </object>
-  <object name="n_6554" x="1024" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6654"/>
-    <property name="sibling_north" value="n_6553"/>
-    <property name="sibling_south" value="n_6555"/>
-    <property name="sibling_west" value="n_6454"/>
-   </properties>
-  </object>
-  <object name="n_6555" x="1024" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6655"/>
-    <property name="sibling_north" value="n_6554"/>
-    <property name="sibling_south" value="n_6556"/>
-    <property name="sibling_west" value="n_6455"/>
-   </properties>
-  </object>
-  <object name="n_6556" x="1024" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6656"/>
-    <property name="sibling_north" value="n_6555"/>
-    <property name="sibling_south" value="n_6557"/>
-    <property name="sibling_west" value="n_6456"/>
    </properties>
   </object>
   <object name="n_6557" x="1024" y="896" width="16" height="16">
@@ -59050,16 +58681,6 @@
     <property name="sibling_west" value="n_6549"/>
    </properties>
   </object>
-  <object name="n_6650" x="1040" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6750"/>
-    <property name="sibling_north" value="n_6649"/>
-    <property name="sibling_south" value="n_6651"/>
-    <property name="sibling_west" value="n_6550"/>
-   </properties>
-  </object>
   <object name="n_6651" x="1040" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -59070,16 +58691,6 @@
     <property name="sibling_west" value="n_6551"/>
    </properties>
   </object>
-  <object name="n_6652" x="1040" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6752"/>
-    <property name="sibling_north" value="n_6651"/>
-    <property name="sibling_south" value="n_6653"/>
-    <property name="sibling_west" value="n_6552"/>
-   </properties>
-  </object>
   <object name="n_6653" x="1040" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -59088,36 +58699,6 @@
     <property name="sibling_north" value="n_6652"/>
     <property name="sibling_south" value="n_6654"/>
     <property name="sibling_west" value="n_6553"/>
-   </properties>
-  </object>
-  <object name="n_6654" x="1040" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6754"/>
-    <property name="sibling_north" value="n_6653"/>
-    <property name="sibling_south" value="n_6655"/>
-    <property name="sibling_west" value="n_6554"/>
-   </properties>
-  </object>
-  <object name="n_6655" x="1040" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6755"/>
-    <property name="sibling_north" value="n_6654"/>
-    <property name="sibling_south" value="n_6656"/>
-    <property name="sibling_west" value="n_6555"/>
-   </properties>
-  </object>
-  <object name="n_6656" x="1040" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6756"/>
-    <property name="sibling_north" value="n_6655"/>
-    <property name="sibling_south" value="n_6657"/>
-    <property name="sibling_west" value="n_6556"/>
    </properties>
   </object>
   <object name="n_6657" x="1040" y="896" width="16" height="16">
@@ -59919,26 +59500,6 @@
     <property name="sibling_west" value="n_6648"/>
    </properties>
   </object>
-  <object name="n_6749" x="1056" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6849"/>
-    <property name="sibling_north" value="n_6748"/>
-    <property name="sibling_south" value="n_6750"/>
-    <property name="sibling_west" value="n_6649"/>
-   </properties>
-  </object>
-  <object name="n_6750" x="1056" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6850"/>
-    <property name="sibling_north" value="n_6749"/>
-    <property name="sibling_south" value="n_6751"/>
-    <property name="sibling_west" value="n_6650"/>
-   </properties>
-  </object>
   <object name="n_6751" x="1056" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -59949,16 +59510,6 @@
     <property name="sibling_west" value="n_6651"/>
    </properties>
   </object>
-  <object name="n_6752" x="1056" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6852"/>
-    <property name="sibling_north" value="n_6751"/>
-    <property name="sibling_south" value="n_6753"/>
-    <property name="sibling_west" value="n_6652"/>
-   </properties>
-  </object>
   <object name="n_6753" x="1056" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -59967,36 +59518,6 @@
     <property name="sibling_north" value="n_6752"/>
     <property name="sibling_south" value="n_6754"/>
     <property name="sibling_west" value="n_6653"/>
-   </properties>
-  </object>
-  <object name="n_6754" x="1056" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6854"/>
-    <property name="sibling_north" value="n_6753"/>
-    <property name="sibling_south" value="n_6755"/>
-    <property name="sibling_west" value="n_6654"/>
-   </properties>
-  </object>
-  <object name="n_6755" x="1056" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6855"/>
-    <property name="sibling_north" value="n_6754"/>
-    <property name="sibling_south" value="n_6756"/>
-    <property name="sibling_west" value="n_6655"/>
-   </properties>
-  </object>
-  <object name="n_6756" x="1056" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6856"/>
-    <property name="sibling_north" value="n_6755"/>
-    <property name="sibling_south" value="n_6757"/>
-    <property name="sibling_west" value="n_6656"/>
    </properties>
   </object>
   <object name="n_6757" x="1056" y="896" width="16" height="16">
@@ -60794,16 +60315,6 @@
     <property name="sibling_west" value="n_6751"/>
    </properties>
   </object>
-  <object name="n_6852" x="1072" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6952"/>
-    <property name="sibling_north" value="n_6851"/>
-    <property name="sibling_south" value="n_6853"/>
-    <property name="sibling_west" value="n_6752"/>
-   </properties>
-  </object>
   <object name="n_6853" x="1072" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -60812,36 +60323,6 @@
     <property name="sibling_north" value="n_6852"/>
     <property name="sibling_south" value="n_6854"/>
     <property name="sibling_west" value="n_6753"/>
-   </properties>
-  </object>
-  <object name="n_6854" x="1072" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6954"/>
-    <property name="sibling_north" value="n_6853"/>
-    <property name="sibling_south" value="n_6855"/>
-    <property name="sibling_west" value="n_6754"/>
-   </properties>
-  </object>
-  <object name="n_6855" x="1072" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6955"/>
-    <property name="sibling_north" value="n_6854"/>
-    <property name="sibling_south" value="n_6856"/>
-    <property name="sibling_west" value="n_6755"/>
-   </properties>
-  </object>
-  <object name="n_6856" x="1072" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_6956"/>
-    <property name="sibling_north" value="n_6855"/>
-    <property name="sibling_south" value="n_6857"/>
-    <property name="sibling_west" value="n_6756"/>
    </properties>
   </object>
   <object name="n_6857" x="1072" y="896" width="16" height="16">
@@ -61702,46 +61183,6 @@
     <property name="sibling_west" value="n_6848"/>
    </properties>
   </object>
-  <object name="n_6949" x="1088" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7049"/>
-    <property name="sibling_north" value="n_6948"/>
-    <property name="sibling_south" value="n_6950"/>
-    <property name="sibling_west" value="n_6849"/>
-   </properties>
-  </object>
-  <object name="n_6950" x="1088" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7050"/>
-    <property name="sibling_north" value="n_6949"/>
-    <property name="sibling_south" value="n_6951"/>
-    <property name="sibling_west" value="n_6850"/>
-   </properties>
-  </object>
-  <object name="n_6951" x="1088" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7051"/>
-    <property name="sibling_north" value="n_6950"/>
-    <property name="sibling_south" value="n_6952"/>
-    <property name="sibling_west" value="n_6851"/>
-   </properties>
-  </object>
-  <object name="n_6952" x="1088" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7052"/>
-    <property name="sibling_north" value="n_6951"/>
-    <property name="sibling_south" value="n_6953"/>
-    <property name="sibling_west" value="n_6852"/>
-   </properties>
-  </object>
   <object name="n_6953" x="1088" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -61770,16 +61211,6 @@
     <property name="sibling_north" value="n_6954"/>
     <property name="sibling_south" value="n_6956"/>
     <property name="sibling_west" value="n_6855"/>
-   </properties>
-  </object>
-  <object name="n_6956" x="1088" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7056"/>
-    <property name="sibling_north" value="n_6955"/>
-    <property name="sibling_south" value="n_6957"/>
-    <property name="sibling_west" value="n_6856"/>
    </properties>
   </object>
   <object name="n_6957" x="1088" y="896" width="16" height="16">
@@ -62672,16 +62103,6 @@
     <property name="sibling_west" value="n_6951"/>
    </properties>
   </object>
-  <object name="n_7052" x="1104" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7152"/>
-    <property name="sibling_north" value="n_7051"/>
-    <property name="sibling_south" value="n_7053"/>
-    <property name="sibling_west" value="n_6952"/>
-   </properties>
-  </object>
   <object name="n_7053" x="1104" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -62692,16 +62113,6 @@
     <property name="sibling_west" value="n_6953"/>
    </properties>
   </object>
-  <object name="n_7054" x="1104" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7154"/>
-    <property name="sibling_north" value="n_7053"/>
-    <property name="sibling_south" value="n_7055"/>
-    <property name="sibling_west" value="n_6954"/>
-   </properties>
-  </object>
   <object name="n_7055" x="1104" y="864" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -62710,16 +62121,6 @@
     <property name="sibling_north" value="n_7054"/>
     <property name="sibling_south" value="n_7056"/>
     <property name="sibling_west" value="n_6955"/>
-   </properties>
-  </object>
-  <object name="n_7056" x="1104" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7156"/>
-    <property name="sibling_north" value="n_7055"/>
-    <property name="sibling_south" value="n_7057"/>
-    <property name="sibling_west" value="n_6956"/>
    </properties>
   </object>
   <object name="n_7057" x="1104" y="896" width="16" height="16">
@@ -63593,36 +62994,6 @@
     <property name="sibling_west" value="n_7049"/>
    </properties>
   </object>
-  <object name="n_7150" x="1120" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7250"/>
-    <property name="sibling_north" value="n_7149"/>
-    <property name="sibling_south" value="n_7151"/>
-    <property name="sibling_west" value="n_7050"/>
-   </properties>
-  </object>
-  <object name="n_7151" x="1120" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7251"/>
-    <property name="sibling_north" value="n_7150"/>
-    <property name="sibling_south" value="n_7152"/>
-    <property name="sibling_west" value="n_7051"/>
-   </properties>
-  </object>
-  <object name="n_7152" x="1120" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7252"/>
-    <property name="sibling_north" value="n_7151"/>
-    <property name="sibling_south" value="n_7153"/>
-    <property name="sibling_west" value="n_7052"/>
-   </properties>
-  </object>
   <object name="n_7153" x="1120" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -63631,36 +63002,6 @@
     <property name="sibling_north" value="n_7152"/>
     <property name="sibling_south" value="n_7154"/>
     <property name="sibling_west" value="n_7053"/>
-   </properties>
-  </object>
-  <object name="n_7154" x="1120" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7254"/>
-    <property name="sibling_north" value="n_7153"/>
-    <property name="sibling_south" value="n_7155"/>
-    <property name="sibling_west" value="n_7054"/>
-   </properties>
-  </object>
-  <object name="n_7155" x="1120" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7255"/>
-    <property name="sibling_north" value="n_7154"/>
-    <property name="sibling_south" value="n_7156"/>
-    <property name="sibling_west" value="n_7055"/>
-   </properties>
-  </object>
-  <object name="n_7156" x="1120" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7256"/>
-    <property name="sibling_north" value="n_7155"/>
-    <property name="sibling_south" value="n_7157"/>
-    <property name="sibling_west" value="n_7056"/>
    </properties>
   </object>
   <object name="n_7157" x="1120" y="896" width="16" height="16">
@@ -64521,46 +63862,6 @@
     <property name="sibling_west" value="n_7148"/>
    </properties>
   </object>
-  <object name="n_7249" x="1136" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7349"/>
-    <property name="sibling_north" value="n_7248"/>
-    <property name="sibling_south" value="n_7250"/>
-    <property name="sibling_west" value="n_7149"/>
-   </properties>
-  </object>
-  <object name="n_7250" x="1136" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7350"/>
-    <property name="sibling_north" value="n_7249"/>
-    <property name="sibling_south" value="n_7251"/>
-    <property name="sibling_west" value="n_7150"/>
-   </properties>
-  </object>
-  <object name="n_7251" x="1136" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7351"/>
-    <property name="sibling_north" value="n_7250"/>
-    <property name="sibling_south" value="n_7252"/>
-    <property name="sibling_west" value="n_7151"/>
-   </properties>
-  </object>
-  <object name="n_7252" x="1136" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7352"/>
-    <property name="sibling_north" value="n_7251"/>
-    <property name="sibling_south" value="n_7253"/>
-    <property name="sibling_west" value="n_7152"/>
-   </properties>
-  </object>
   <object name="n_7253" x="1136" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -64569,16 +63870,6 @@
     <property name="sibling_north" value="n_7252"/>
     <property name="sibling_south" value="n_7254"/>
     <property name="sibling_west" value="n_7153"/>
-   </properties>
-  </object>
-  <object name="n_7254" x="1136" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7354"/>
-    <property name="sibling_north" value="n_7253"/>
-    <property name="sibling_south" value="n_7255"/>
-    <property name="sibling_west" value="n_7154"/>
    </properties>
   </object>
   <object name="n_7255" x="1136" y="864" width="16" height="16">
@@ -65395,16 +64686,6 @@
     <property name="sibling_west" value="n_7251"/>
    </properties>
   </object>
-  <object name="n_7352" x="1152" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7452"/>
-    <property name="sibling_north" value="n_7351"/>
-    <property name="sibling_south" value="n_7353"/>
-    <property name="sibling_west" value="n_7252"/>
-   </properties>
-  </object>
   <object name="n_7353" x="1152" y="832" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -65413,36 +64694,6 @@
     <property name="sibling_north" value="n_7352"/>
     <property name="sibling_south" value="n_7354"/>
     <property name="sibling_west" value="n_7253"/>
-   </properties>
-  </object>
-  <object name="n_7354" x="1152" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7454"/>
-    <property name="sibling_north" value="n_7353"/>
-    <property name="sibling_south" value="n_7355"/>
-    <property name="sibling_west" value="n_7254"/>
-   </properties>
-  </object>
-  <object name="n_7355" x="1152" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7455"/>
-    <property name="sibling_north" value="n_7354"/>
-    <property name="sibling_south" value="n_7356"/>
-    <property name="sibling_west" value="n_7255"/>
-   </properties>
-  </object>
-  <object name="n_7356" x="1152" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7456"/>
-    <property name="sibling_north" value="n_7355"/>
-    <property name="sibling_south" value="n_7357"/>
-    <property name="sibling_west" value="n_7256"/>
    </properties>
   </object>
   <object name="n_7357" x="1152" y="896" width="16" height="16">
@@ -66276,26 +65527,6 @@
     <property name="sibling_west" value="n_7348"/>
    </properties>
   </object>
-  <object name="n_7449" x="1168" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7549"/>
-    <property name="sibling_north" value="n_7448"/>
-    <property name="sibling_south" value="n_7450"/>
-    <property name="sibling_west" value="n_7349"/>
-   </properties>
-  </object>
-  <object name="n_7450" x="1168" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7550"/>
-    <property name="sibling_north" value="n_7449"/>
-    <property name="sibling_south" value="n_7451"/>
-    <property name="sibling_west" value="n_7350"/>
-   </properties>
-  </object>
   <object name="n_7451" x="1168" y="800" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -66324,36 +65555,6 @@
     <property name="sibling_north" value="n_7452"/>
     <property name="sibling_south" value="n_7454"/>
     <property name="sibling_west" value="n_7353"/>
-   </properties>
-  </object>
-  <object name="n_7454" x="1168" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7554"/>
-    <property name="sibling_north" value="n_7453"/>
-    <property name="sibling_south" value="n_7455"/>
-    <property name="sibling_west" value="n_7354"/>
-   </properties>
-  </object>
-  <object name="n_7455" x="1168" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7555"/>
-    <property name="sibling_north" value="n_7454"/>
-    <property name="sibling_south" value="n_7456"/>
-    <property name="sibling_west" value="n_7355"/>
-   </properties>
-  </object>
-  <object name="n_7456" x="1168" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7556"/>
-    <property name="sibling_north" value="n_7455"/>
-    <property name="sibling_south" value="n_7457"/>
-    <property name="sibling_west" value="n_7356"/>
    </properties>
   </object>
   <object name="n_7457" x="1168" y="896" width="16" height="16">
@@ -67196,66 +66397,6 @@
     <property name="sibling_west" value="n_7449"/>
    </properties>
   </object>
-  <object name="n_7550" x="1184" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7650"/>
-    <property name="sibling_north" value="n_7549"/>
-    <property name="sibling_south" value="n_7551"/>
-    <property name="sibling_west" value="n_7450"/>
-   </properties>
-  </object>
-  <object name="n_7551" x="1184" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7651"/>
-    <property name="sibling_north" value="n_7550"/>
-    <property name="sibling_south" value="n_7552"/>
-    <property name="sibling_west" value="n_7451"/>
-   </properties>
-  </object>
-  <object name="n_7552" x="1184" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7652"/>
-    <property name="sibling_north" value="n_7551"/>
-    <property name="sibling_south" value="n_7553"/>
-    <property name="sibling_west" value="n_7452"/>
-   </properties>
-  </object>
-  <object name="n_7553" x="1184" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7653"/>
-    <property name="sibling_north" value="n_7552"/>
-    <property name="sibling_south" value="n_7554"/>
-    <property name="sibling_west" value="n_7453"/>
-   </properties>
-  </object>
-  <object name="n_7554" x="1184" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7654"/>
-    <property name="sibling_north" value="n_7553"/>
-    <property name="sibling_south" value="n_7555"/>
-    <property name="sibling_west" value="n_7454"/>
-   </properties>
-  </object>
-  <object name="n_7555" x="1184" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7655"/>
-    <property name="sibling_north" value="n_7554"/>
-    <property name="sibling_south" value="n_7556"/>
-    <property name="sibling_west" value="n_7455"/>
-   </properties>
-  </object>
   <object name="n_7556" x="1184" y="880" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -68042,26 +67183,6 @@
     <property name="sibling_north" value="n_7652"/>
     <property name="sibling_south" value="n_7654"/>
     <property name="sibling_west" value="n_7553"/>
-   </properties>
-  </object>
-  <object name="n_7654" x="1200" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7754"/>
-    <property name="sibling_north" value="n_7653"/>
-    <property name="sibling_south" value="n_7655"/>
-    <property name="sibling_west" value="n_7554"/>
-   </properties>
-  </object>
-  <object name="n_7655" x="1200" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7755"/>
-    <property name="sibling_north" value="n_7654"/>
-    <property name="sibling_south" value="n_7656"/>
-    <property name="sibling_west" value="n_7555"/>
    </properties>
   </object>
   <object name="n_7656" x="1200" y="880" width="16" height="16">
@@ -68902,26 +68023,6 @@
     <property name="sibling_west" value="n_7643"/>
    </properties>
   </object>
-  <object name="n_7750" x="1216" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7850"/>
-    <property name="sibling_north" value="n_7749"/>
-    <property name="sibling_south" value="n_7751"/>
-    <property name="sibling_west" value="n_7650"/>
-   </properties>
-  </object>
-  <object name="n_7751" x="1216" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7851"/>
-    <property name="sibling_north" value="n_7750"/>
-    <property name="sibling_south" value="n_7752"/>
-    <property name="sibling_west" value="n_7651"/>
-   </properties>
-  </object>
   <object name="n_7752" x="1216" y="816" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -68930,46 +68031,6 @@
     <property name="sibling_north" value="n_7751"/>
     <property name="sibling_south" value="n_7753"/>
     <property name="sibling_west" value="n_7652"/>
-   </properties>
-  </object>
-  <object name="n_7753" x="1216" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7853"/>
-    <property name="sibling_north" value="n_7752"/>
-    <property name="sibling_south" value="n_7754"/>
-    <property name="sibling_west" value="n_7653"/>
-   </properties>
-  </object>
-  <object name="n_7754" x="1216" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7854"/>
-    <property name="sibling_north" value="n_7753"/>
-    <property name="sibling_south" value="n_7755"/>
-    <property name="sibling_west" value="n_7654"/>
-   </properties>
-  </object>
-  <object name="n_7755" x="1216" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7855"/>
-    <property name="sibling_north" value="n_7754"/>
-    <property name="sibling_south" value="n_7756"/>
-    <property name="sibling_west" value="n_7655"/>
-   </properties>
-  </object>
-  <object name="n_7756" x="1216" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7856"/>
-    <property name="sibling_north" value="n_7755"/>
-    <property name="sibling_south" value="n_7757"/>
-    <property name="sibling_west" value="n_7656"/>
    </properties>
   </object>
   <object name="n_7757" x="1216" y="896" width="16" height="16">
@@ -69842,26 +68903,6 @@
     <property name="sibling_west" value="n_7747"/>
    </properties>
   </object>
-  <object name="n_7850" x="1232" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7950"/>
-    <property name="sibling_north" value="n_7849"/>
-    <property name="sibling_south" value="n_7851"/>
-    <property name="sibling_west" value="n_7750"/>
-   </properties>
-  </object>
-  <object name="n_7851" x="1232" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7951"/>
-    <property name="sibling_north" value="n_7850"/>
-    <property name="sibling_south" value="n_7852"/>
-    <property name="sibling_west" value="n_7751"/>
-   </properties>
-  </object>
   <object name="n_7852" x="1232" y="816" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -69870,46 +68911,6 @@
     <property name="sibling_north" value="n_7851"/>
     <property name="sibling_south" value="n_7853"/>
     <property name="sibling_west" value="n_7752"/>
-   </properties>
-  </object>
-  <object name="n_7853" x="1232" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7953"/>
-    <property name="sibling_north" value="n_7852"/>
-    <property name="sibling_south" value="n_7854"/>
-    <property name="sibling_west" value="n_7753"/>
-   </properties>
-  </object>
-  <object name="n_7854" x="1232" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7954"/>
-    <property name="sibling_north" value="n_7853"/>
-    <property name="sibling_south" value="n_7855"/>
-    <property name="sibling_west" value="n_7754"/>
-   </properties>
-  </object>
-  <object name="n_7855" x="1232" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7955"/>
-    <property name="sibling_north" value="n_7854"/>
-    <property name="sibling_south" value="n_7856"/>
-    <property name="sibling_west" value="n_7755"/>
-   </properties>
-  </object>
-  <object name="n_7856" x="1232" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_7956"/>
-    <property name="sibling_north" value="n_7855"/>
-    <property name="sibling_south" value="n_7857"/>
-    <property name="sibling_west" value="n_7756"/>
    </properties>
   </object>
   <object name="n_7857" x="1232" y="896" width="16" height="16">
@@ -70780,36 +69781,6 @@
     <property name="sibling_west" value="n_7847"/>
    </properties>
   </object>
-  <object name="n_7949" x="1248" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8049"/>
-    <property name="sibling_north" value="n_7948"/>
-    <property name="sibling_south" value="n_7950"/>
-    <property name="sibling_west" value="n_7849"/>
-   </properties>
-  </object>
-  <object name="n_7950" x="1248" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8050"/>
-    <property name="sibling_north" value="n_7949"/>
-    <property name="sibling_south" value="n_7951"/>
-    <property name="sibling_west" value="n_7850"/>
-   </properties>
-  </object>
-  <object name="n_7951" x="1248" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8051"/>
-    <property name="sibling_north" value="n_7950"/>
-    <property name="sibling_south" value="n_7952"/>
-    <property name="sibling_west" value="n_7851"/>
-   </properties>
-  </object>
   <object name="n_7952" x="1248" y="816" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -70818,46 +69789,6 @@
     <property name="sibling_north" value="n_7951"/>
     <property name="sibling_south" value="n_7953"/>
     <property name="sibling_west" value="n_7852"/>
-   </properties>
-  </object>
-  <object name="n_7953" x="1248" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8053"/>
-    <property name="sibling_north" value="n_7952"/>
-    <property name="sibling_south" value="n_7954"/>
-    <property name="sibling_west" value="n_7853"/>
-   </properties>
-  </object>
-  <object name="n_7954" x="1248" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8054"/>
-    <property name="sibling_north" value="n_7953"/>
-    <property name="sibling_south" value="n_7955"/>
-    <property name="sibling_west" value="n_7854"/>
-   </properties>
-  </object>
-  <object name="n_7955" x="1248" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8055"/>
-    <property name="sibling_north" value="n_7954"/>
-    <property name="sibling_south" value="n_7956"/>
-    <property name="sibling_west" value="n_7855"/>
-   </properties>
-  </object>
-  <object name="n_7956" x="1248" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8056"/>
-    <property name="sibling_north" value="n_7955"/>
-    <property name="sibling_south" value="n_7957"/>
-    <property name="sibling_west" value="n_7856"/>
    </properties>
   </object>
   <object name="n_7957" x="1248" y="896" width="16" height="16">
@@ -71728,26 +70659,6 @@
     <property name="sibling_west" value="n_7947"/>
    </properties>
   </object>
-  <object name="n_8050" x="1264" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8150"/>
-    <property name="sibling_north" value="n_8049"/>
-    <property name="sibling_south" value="n_8051"/>
-    <property name="sibling_west" value="n_7950"/>
-   </properties>
-  </object>
-  <object name="n_8051" x="1264" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8151"/>
-    <property name="sibling_north" value="n_8050"/>
-    <property name="sibling_south" value="n_8052"/>
-    <property name="sibling_west" value="n_7951"/>
-   </properties>
-  </object>
   <object name="n_8052" x="1264" y="816" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -71756,16 +70667,6 @@
     <property name="sibling_north" value="n_8051"/>
     <property name="sibling_south" value="n_8053"/>
     <property name="sibling_west" value="n_7952"/>
-   </properties>
-  </object>
-  <object name="n_8053" x="1264" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8153"/>
-    <property name="sibling_north" value="n_8052"/>
-    <property name="sibling_south" value="n_8054"/>
-    <property name="sibling_west" value="n_7953"/>
    </properties>
   </object>
   <object name="n_8054" x="1264" y="848" width="16" height="16">
@@ -72666,86 +71567,6 @@
     <property name="sibling_west" value="n_8047"/>
    </properties>
   </object>
-  <object name="n_8149" x="1280" y="768" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8249"/>
-    <property name="sibling_north" value="n_8148"/>
-    <property name="sibling_south" value="n_8150"/>
-    <property name="sibling_west" value="n_8049"/>
-   </properties>
-  </object>
-  <object name="n_8150" x="1280" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8250"/>
-    <property name="sibling_north" value="n_8149"/>
-    <property name="sibling_south" value="n_8151"/>
-    <property name="sibling_west" value="n_8050"/>
-   </properties>
-  </object>
-  <object name="n_8151" x="1280" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8251"/>
-    <property name="sibling_north" value="n_8150"/>
-    <property name="sibling_south" value="n_8152"/>
-    <property name="sibling_west" value="n_8051"/>
-   </properties>
-  </object>
-  <object name="n_8152" x="1280" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8252"/>
-    <property name="sibling_north" value="n_8151"/>
-    <property name="sibling_south" value="n_8153"/>
-    <property name="sibling_west" value="n_8052"/>
-   </properties>
-  </object>
-  <object name="n_8153" x="1280" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8253"/>
-    <property name="sibling_north" value="n_8152"/>
-    <property name="sibling_south" value="n_8154"/>
-    <property name="sibling_west" value="n_8053"/>
-   </properties>
-  </object>
-  <object name="n_8154" x="1280" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8254"/>
-    <property name="sibling_north" value="n_8153"/>
-    <property name="sibling_south" value="n_8155"/>
-    <property name="sibling_west" value="n_8054"/>
-   </properties>
-  </object>
-  <object name="n_8155" x="1280" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8255"/>
-    <property name="sibling_north" value="n_8154"/>
-    <property name="sibling_south" value="n_8156"/>
-    <property name="sibling_west" value="n_8055"/>
-   </properties>
-  </object>
-  <object name="n_8156" x="1280" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8256"/>
-    <property name="sibling_north" value="n_8155"/>
-    <property name="sibling_south" value="n_8157"/>
-    <property name="sibling_west" value="n_8056"/>
-   </properties>
-  </object>
   <object name="n_8159" x="1280" y="928" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -73606,76 +72427,6 @@
     <property name="sibling_west" value="n_8147"/>
    </properties>
   </object>
-  <object name="n_8250" x="1296" y="784" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8350"/>
-    <property name="sibling_north" value="n_8249"/>
-    <property name="sibling_south" value="n_8251"/>
-    <property name="sibling_west" value="n_8150"/>
-   </properties>
-  </object>
-  <object name="n_8251" x="1296" y="800" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8351"/>
-    <property name="sibling_north" value="n_8250"/>
-    <property name="sibling_south" value="n_8252"/>
-    <property name="sibling_west" value="n_8151"/>
-   </properties>
-  </object>
-  <object name="n_8252" x="1296" y="816" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8352"/>
-    <property name="sibling_north" value="n_8251"/>
-    <property name="sibling_south" value="n_8253"/>
-    <property name="sibling_west" value="n_8152"/>
-   </properties>
-  </object>
-  <object name="n_8253" x="1296" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8353"/>
-    <property name="sibling_north" value="n_8252"/>
-    <property name="sibling_south" value="n_8254"/>
-    <property name="sibling_west" value="n_8153"/>
-   </properties>
-  </object>
-  <object name="n_8254" x="1296" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8354"/>
-    <property name="sibling_north" value="n_8253"/>
-    <property name="sibling_south" value="n_8255"/>
-    <property name="sibling_west" value="n_8154"/>
-   </properties>
-  </object>
-  <object name="n_8255" x="1296" y="864" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8355"/>
-    <property name="sibling_north" value="n_8254"/>
-    <property name="sibling_south" value="n_8256"/>
-    <property name="sibling_west" value="n_8155"/>
-   </properties>
-  </object>
-  <object name="n_8256" x="1296" y="880" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8356"/>
-    <property name="sibling_north" value="n_8255"/>
-    <property name="sibling_south" value="n_8257"/>
-    <property name="sibling_west" value="n_8156"/>
-   </properties>
-  </object>
   <object name="n_8259" x="1296" y="928" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -74532,26 +73283,6 @@
     <property name="sibling_north" value="n_8346"/>
     <property name="sibling_south" value="n_8348"/>
     <property name="sibling_west" value="n_8247"/>
-   </properties>
-  </object>
-  <object name="n_8353" x="1312" y="832" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8453"/>
-    <property name="sibling_north" value="n_8352"/>
-    <property name="sibling_south" value="n_8354"/>
-    <property name="sibling_west" value="n_8253"/>
-   </properties>
-  </object>
-  <object name="n_8354" x="1312" y="848" width="16" height="16">
-   <properties>
-    <property name="on_enter" value=""/>
-    <property name="on_exit" value=""/>
-    <property name="sibling_east" value="n_8454"/>
-    <property name="sibling_north" value="n_8353"/>
-    <property name="sibling_south" value="n_8355"/>
-    <property name="sibling_west" value="n_8254"/>
    </properties>
   </object>
   <object name="n_8359" x="1312" y="928" width="16" height="16">
@@ -77410,6 +76141,7 @@
   </object>
   <object name="n_8671" x="1360" y="1120" width="16" height="16">
    <properties>
+    <property name="not_walkable" value="true"/>
     <property name="on_enter" value=""/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_8771"/>
@@ -77420,6 +76152,8 @@
   </object>
   <object name="n_8672" x="1360" y="1136" width="16" height="16">
    <properties>
+    <property name="light" value="circle"/>
+    <property name="not_walkable" value="true"/>
     <property name="on_enter" value=""/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_8772"/>

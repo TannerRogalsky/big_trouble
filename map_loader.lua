@@ -38,6 +38,7 @@ function MapLoader.load(map_name)
 
   map_area.tile_light_mask = {}
   map_area.torches = {left = {}, right = {}, middle = {}}
+  map_area.lights = {}
   for index,tile_data in ipairs(layers.objectgroup["Nodes"].objects) do
     local grid_x, grid_y = tile_data.x / map_data.tilewidth + 1, tile_data.y / map_data.tileheight + 1
     local tile = map_area.grid:g(grid_x, grid_y)
@@ -56,9 +57,12 @@ function MapLoader.load(map_name)
     tile.on_enter = map_triggers[tile_data.properties.on_enter]
     tile.on_exit = map_triggers[tile_data.properties.on_exit]
 
+    if tile_data.properties.light then
+      table.insert(map_area.lights, {x =  (grid_x - 1) * map_area.tile_width, y = (grid_y - 1) * map_area.tile_height, light_type = tile_data.properties.light})
+    end
+
     if tile_data.properties.torch ~= nil then
       table.insert(map_area.torches[tile_data.properties.torch], {x =  (grid_x - 1) * map_area.tile_width, y = (grid_y - 1) * map_area.tile_height})
-      print(tile_data.properties.torch, (grid_x - 1) * map_area.tile_width, (grid_y - 1) * map_area.tile_height)
     end
 
     table.insert(map_area.tile_light_mask, {x =  (grid_x - 1) * map_area.tile_width, y = (grid_y - 1) * map_area.tile_height, width = map_area.tile_width, height = map_area.tile_height})

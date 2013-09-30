@@ -19,7 +19,7 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
 
   self.animations = {}
   for index, direction in ipairs(Direction.list) do
-    local image = g.newImage("images/characterwalk/walk" .. direction.cardinal_name:lower() .. ".png")
+    local image = game.preloaded_image["walk" .. direction.cardinal_name:lower() .. ".png"]
     image:setFilter("nearest", "nearest")
     self.animations[direction] = newAnimation(image, 16, 16, 0.1, 4)
   end

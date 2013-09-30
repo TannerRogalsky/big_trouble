@@ -36,7 +36,13 @@ function DialogueSystem.say(entity, text, callbacks)
   if DialogueSystem.callbacks then
     local index = 1
     for key,callback_table in pairs(DialogueSystem.callbacks) do
-      g.print(key .. ". " .. callback_table.text, h, index * 20)
+      local text = ""
+      if key == " " then
+        text = callback_table.text
+      else
+        text = key .. ". " .. callback_table.text
+      end
+      g.print(text, h, index * 20)
       index = index + 1
     end
   end

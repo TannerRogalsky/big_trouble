@@ -15,7 +15,7 @@ function Loading:enteredState()
     -- loader finished callback
     -- initialize game stuff here
 
-    self:gotoState("Menu")
+    self:gotoState("Main")
   end)
 end
 

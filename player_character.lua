@@ -62,7 +62,7 @@ function PlayerCharacter:render()
   local x, y, width, height = self:world_bounds()
   g.setColor(COLORS.white:rgb())
   -- g.draw(self.render_surface, x + width / 2, y + height / 2, self.angle, 1, 1, width / 2, height / 2)
-  self.animation:draw(x, y)
+  self.animation:draw(x, y - 4)
 end
 
 

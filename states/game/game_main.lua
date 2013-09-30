@@ -3,7 +3,7 @@ local Main = Game:addState('Main')
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
-  self.map = MapLoader.load("level1")
+  self.map = MapLoader.load("level2")
 
   self.camera:setScale(0.25, 0.25)
 
@@ -13,11 +13,17 @@ function Main:enteredState()
   -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
   -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
-  self.character = PlayerCharacter:new(self.map, 3, 2, 1, 1)
+  self.character = PlayerCharacter:new(self.map, 13, 2, 1, 1)
   self.map:add_entity(self.character)
 
   self.overlay = g.newCanvas(g.getWidth(), g.getHeight())
   self.light = g.newImage("images/gradient_overlay.png")
+
+  self.torch_animations = {
+    left = newAnimation(game.preloaded_image["torch_left.png"], 16, 16, 0.1, 8),
+    middle = newAnimation(game.preloaded_image["torch_middle.png"], 16, 16, 0.1, 8),
+    right = newAnimation(game.preloaded_image["torch_right.png"], 16, 16, 0.1, 8)
+  }
 
   local bg_music = love.audio.newSource("sounds/bg_music.ogg")
   -- bg_music:play()
@@ -26,6 +32,10 @@ end
 
 function Main:update(dt)
   self.character:update(dt)
+
+  for _,torch_animation in pairs(self.torch_animations) do
+    torch_animation:update(dt)
+  end
 end
 
 function Main:render()
@@ -36,6 +46,15 @@ function Main:render()
   self.camera:setPosition(cx - (g.getWidth() * self.camera.scaleX) / 2, cy - (g.getHeight() * self.camera.scaleY) / 2)
   self.map:render()
 
+  for type,torches in pairs(self.map.torches) do
+    for _,torch in ipairs(torches) do
+      local x, y = torch.x, torch.y
+      local animation = self.torch_animations[type]
+      local iw, ih = 16, 16
+      animation:draw(x, y)
+    end
+  end
+
   self.camera:unset()
 
   self.overlay:clear()
@@ -45,14 +64,15 @@ function Main:render()
   g.rectangle("fill", 0, 0, g.getWidth(), g.getHeight())
 
   g.setColor(COLORS.white:rgb())
-  g.setStencil(function()
-    -- g.polygon("fill", cx / 0.25 + 16 / 0.5, cy / 0.25 + 16 / 0.5, 0, 0, 300, 0)
-    for _,mask in ipairs(self.map.tile_light_mask) do
-      g.rectangle("fill", mask.x / 0.25 - self.camera.x / 0.25, mask.y / 0.25 - self.camera.y / 0.25, mask.width / 0.25, mask.height / 0.25)
-    end
-  end)
   local iw, ih = self.light:getWidth(), self.light:getHeight()
   g.draw(self.light, cx / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, cy / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
+
+  for type,torches in pairs(self.map.torches) do
+    for _,torch in ipairs(torches) do
+      local x, y = torch.x, torch.y
+      g.draw(self.light, x / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, y / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
+    end
+  end
 
   -- g.setColor(COLORS.blue:rgb())
   -- g.draw(self.light, 200, 200)

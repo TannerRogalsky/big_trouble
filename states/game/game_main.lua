@@ -3,7 +3,9 @@ local Main = Game:addState('Main')
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
-  self.map = MapLoader.load("level2")
+  if self.map == nil then
+    self.map = MapLoader.load("level2")
+  end
 
   self.camera:setScale(0.25, 0.25)
 
@@ -13,7 +15,7 @@ function Main:enteredState()
   -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
   -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
-  self.character = PlayerCharacter:new(self.map, 73, 46, 1, 1)
+  self.character = PlayerCharacter:new(self.map, 83, 72, 1, 1)
   self.map:add_entity(self.character)
 
   self.overlay = g.newCanvas(g.getWidth(), g.getHeight())
@@ -29,10 +31,6 @@ function Main:enteredState()
     square = game.preloaded_image["square.png"],
     circle = game.preloaded_image["gradient_overlay.png"]
   }
-
-  local bg_music = love.audio.newSource("sounds/bg_music.ogg")
-  -- bg_music:play()
-  bg_music:setLooping(true)
 end
 
 function Main:update(dt)

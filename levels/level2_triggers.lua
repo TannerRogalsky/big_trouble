@@ -113,7 +113,7 @@ function triggers.maat_judgement(tile)
       action = function()
         DialogueSystem.clear()
         DialogueSystem.say(DialogueSystem.entities.Maat,
-          "You have lead a virtuous life, mortal. Welcome to the afterlife.", {
+          "You have lead a virtuous life, mortal. You may board Ra's boat to the afterlife.", {
           [" "] = {
             text = "Press Space to go to the afterlife.",
             action = function()

@@ -96,3 +96,8 @@ function MapArea:world_to_grid_coords(x, y)
   return math.floor(x / self.tile_width + self.x + 1), math.floor(y / self.tile_height - self.y + 1)
 end
 
+function MapArea:clear_entities()
+  for _,entity in pairs(self.entity_list) do
+    self:remove_entity(entity)
+  end
+end

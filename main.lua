@@ -2,6 +2,9 @@ love.filesystem.load('requirements.lua')()
 
 function love.load()
   game = Game:new()
+  local bg_music = love.audio.newSource("sounds/bg_music.ogg")
+  bg_music:play()
+  bg_music:setLooping(true)
 end
 
 function love.update(dt)

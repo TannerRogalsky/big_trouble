@@ -23,7 +23,7 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
     image:setFilter("nearest", "nearest")
     self.animations[direction] = newAnimation(image, 16, 16, 0.1, 4)
   end
-  self.animation = self.animations[Direction.NORTH]
+  self.animation = self.animations[Direction.SOUTH]
 
   self.controls = {
     keyboard = {

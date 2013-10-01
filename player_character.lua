@@ -41,6 +41,8 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
       }
     }
   }
+
+  self.triggers_done = {}
 end
 
 function PlayerCharacter:update(dt)

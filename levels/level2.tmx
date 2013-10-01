@@ -3971,7 +3971,7 @@
   </object>
   <object name="n_0533" x="64" y="512" width="16" height="16">
    <properties>
-    <property name="on_enter" value=""/>
+    <property name="on_enter" value="gold_temptation"/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_0633"/>
     <property name="sibling_north" value="n_0532"/>
@@ -10886,7 +10886,7 @@
   </object>
   <object name="n_1303" x="192" y="32" width="16" height="16">
    <properties>
-    <property name="on_enter" value=""/>
+    <property name="on_enter" value="anubis_welcome"/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_1403"/>
     <property name="sibling_north" value="n_1302"/>
@@ -11864,7 +11864,7 @@
   </object>
   <object name="n_1403" x="208" y="32" width="16" height="16">
    <properties>
-    <property name="on_enter" value=""/>
+    <property name="on_enter" value="anubis_welcome"/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_1503"/>
     <property name="sibling_north" value="n_1402"/>
@@ -13807,7 +13807,7 @@
   </object>
   <object name="n_1621" x="240" y="320" width="16" height="16">
    <properties>
-    <property name="on_enter" value=""/>
+    <property name="on_enter" value="anubis_warn"/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_1721"/>
     <property name="sibling_north" value="n_1620"/>
@@ -64648,7 +64648,7 @@
   </object>
   <object name="n_7348" x="1152" y="752" width="16" height="16">
    <properties>
-    <property name="on_enter" value=""/>
+    <property name="on_enter" value="set_threat"/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_7448"/>
     <property name="sibling_north" value="n_7347"/>
@@ -75183,7 +75183,7 @@
   </object>
   <object name="n_8572" x="1344" y="1136" width="16" height="16">
    <properties>
-    <property name="on_enter" value=""/>
+    <property name="on_enter" value="maat_judgement"/>
     <property name="on_exit" value=""/>
     <property name="sibling_east" value="n_8672"/>
     <property name="sibling_north" value="n_8571"/>

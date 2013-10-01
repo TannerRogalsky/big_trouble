@@ -17,6 +17,7 @@ DialogueSystem.static.entities = {
 local active = false
 DialogueSystem.static.callbacks = nil
 DialogueSystem.static.render_surface = g.newCanvas(g.getWidth(), g.getHeight() / 3)
+DialogueSystem.static.background = g.newImage("images/parchement.png")
 
 function DialogueSystem.say(entity, text, callbacks)
   game.character:gotoState("NotMoving")
@@ -26,15 +27,18 @@ function DialogueSystem.say(entity, text, callbacks)
   g.setColor(COLORS.white:rgb())
   local h = c:getHeight()
   g.draw(entity.image, 0, 0, 0, h / entity.image:getWidth())
-  g.rectangle("fill", h, 0, c:getWidth(), h)
+  g.draw(DialogueSystem.background, h, 0, 0, 1.24, 1)
+  -- g.rectangle("fill", h, 0, c:getWidth(), h)
   g.setColor(COLORS.black:rgb())
 
-  h = h + 10
-  g.print(entity.name .. ": " .. text, h, 0)
+  h = h + 70
+  g.printf(entity.name .. ": " .. text, h, 70, 800)
+
+  local height = game.default_font:getHeight()
 
   DialogueSystem.callbacks = callbacks
   if DialogueSystem.callbacks then
-    local index = 1
+    local index = 7
     for key,callback_table in pairs(DialogueSystem.callbacks) do
       local text = ""
       if key == " " then
@@ -42,7 +46,7 @@ function DialogueSystem.say(entity, text, callbacks)
       else
         text = key .. ". " .. callback_table.text
       end
-      g.print(text, h, index * 20)
+      g.print(text, h, index * height)
       index = index + 1
     end
   end

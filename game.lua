@@ -6,7 +6,7 @@ function Game:initialize()
   local Camera = require 'lib/camera'
   self.camera = Camera:new()
 
-  self.default_font = g.newFont(16)
+  self.default_font = g.newFont("fonts/Minecraftia.ttf", 16)
   g.setFont(self.default_font)
 
   self:gotoState("Loading")

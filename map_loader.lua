@@ -79,14 +79,13 @@ function MapLoader.load(map_name)
 
         if quad_index ~= 0 then
           g.drawq(tileset_data.image, quad, x * map_area.tile_width, y * map_area.tile_height)
-        else
-          g.rectangle("line", x * map_area.tile_width, y * map_area.tile_height, map_area.tile_width, map_area.tile_height)
         end
       end
     end
     g.setCanvas()
-    table.insert(map_area.tile_layers, canvas)
+    map_area.tile_layers[name] = canvas
   end
+  map_area.tile_layers["Light Mask"]:setFilter("linear", "linear")
 
   map_area.tileset_data = tileset_data
   map_area.tileset_quads = tileset_quads

@@ -43,28 +43,13 @@ end
 
 function MapArea:render()
   g.setColor(COLORS.white:rgb())
-  -- g.draw(self.tileset_data.image, 0, 0)
-  -- local index = 1
-  -- for y = 0, self.tileset_data.imageheight, self.tileset_data.tileheight do
-  --   for x = 0, self.tileset_data.imagewidth, self.tileset_data.tilewidth do
-  --     -- g.newQuad(x, y, tile_width, tile_height, image_width, image_height)
-  --     local quad = self.tileset_quads[index]
-  --     if quad then
-  --       g.drawq(self.tileset_data.image, self.tileset_quads[index], x, y)
-  --       g.print(index, x, y, 0, 0.5)
-  --       index = index + 1
-  --     end
-  --   end
-  -- end
-
-
-  for _, layer in ipairs(self.tile_layers) do
-    g.draw(layer, 0, 0)
-  end
+  g.draw(self.tile_layers["Background"], 0, 0)
 
   for index,entity in self.render_queue:ipairs() do
     entity:render()
   end
+
+  -- g.draw(self.tile_layers["Foreground"], 0, 0)
 end
 
 function MapArea:add_entity(entity)

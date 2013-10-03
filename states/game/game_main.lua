@@ -30,6 +30,8 @@ end
 
 function Main:update(dt)
   self.character:update(dt)
+  local cx, cy = self.character:world_bounds()
+  self.camera:setPosition(cx - (g.getWidth() * self.camera.scaleX) / 2, cy - (g.getHeight() * self.camera.scaleY) / 2)
 
   for _,torch_animation in pairs(self.torch_animations) do
     torch_animation:update(dt)
@@ -39,9 +41,6 @@ end
 function Main:render()
   self.camera:set()
 
-  local cx, cy = self.character:world_bounds()
-
-  self.camera:setPosition(cx - (g.getWidth() * self.camera.scaleX) / 2, cy - (g.getHeight() * self.camera.scaleY) / 2)
   self.map:render()
 
   for type,torches in pairs(self.map.torches) do
@@ -55,6 +54,7 @@ function Main:render()
 
   self.camera:unset()
 
+  -- light mask
   self.overlay:clear()
   g.setCanvas(self.overlay)
 
@@ -62,18 +62,11 @@ function Main:render()
   g.rectangle("fill", 0, 0, g.getWidth(), g.getHeight())
 
   g.setColor(COLORS.white:rgb())
+  local cx, cy = self.character:world_bounds()
   local iw, ih = self.light:getWidth(), self.light:getHeight()
   g.draw(self.light, cx / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, cy / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
 
-  for type,torches in pairs(self.map.torches) do
-    for _,torch in ipairs(torches) do
-      local x, y = torch.x, torch.y
-      g.draw(self.light, x / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, y / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
-    end
-  end
-
-  -- g.setColor(COLORS.blue:rgb())
-  -- g.draw(self.light, 200, 200)
+  g.draw(self.map.tile_layers["Light Mask"], -self.camera.x / self.camera.scaleX, -self.camera.y / self.camera.scaleY, 0, 1/self.camera.scaleX, 1/self.camera.scaleY)
   g.setCanvas()
 
   g.setColor(COLORS.white:rgb())

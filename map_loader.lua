@@ -12,14 +12,12 @@ function MapLoader.load(map_name)
 
   local tileset_data = map_data.tilesets[1]
   tileset_data.image = g.newImage(MapLoader.fix_relative_path(tileset_data.image))
-  for y = 0, tileset_data.imageheight, tileset_data.tileheight do
-    for x = 0, tileset_data.imagewidth, tileset_data.tilewidth do
+  for y = 0, tileset_data.imageheight - 1, tileset_data.tileheight do
+    for x = 0, tileset_data.imagewidth - 1, tileset_data.tilewidth do
       local tile_width, tile_height = tileset_data.tilewidth, tileset_data.tileheight
       local image_width, image_height = tileset_data.imagewidth, tileset_data.imageheight
 
-      if x + tile_width - 15 <= tileset_data.imagewidth and y + tile_height - 15 <= tileset_data.imageheight then
-        table.insert(tileset_quads, g.newQuad(x, y, tile_width, tile_height, image_width, image_height))
-      end
+      table.insert(tileset_quads, g.newQuad(x, y, tile_width, tile_height, image_width, image_height))
     end
   end
 

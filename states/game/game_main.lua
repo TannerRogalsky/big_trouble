@@ -15,7 +15,7 @@ function Main:enteredState()
   -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
   -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
-  self.character = PlayerCharacter:new(self.map, 13, 1, 1, 1)
+  self.character = PlayerCharacter:new(self.map, 69, 47, 1, 1)
   self.map:add_entity(self.character)
 
   self.overlay = g.newCanvas(g.getWidth(), g.getHeight())

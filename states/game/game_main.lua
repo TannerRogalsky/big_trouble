@@ -4,7 +4,7 @@ function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
   if self.map == nil then
-    self.map = MapLoader.load("level2")
+    self.map = MapLoader.load("level3")
   end
 
   self.camera:setScale(0.25, 0.25)
@@ -25,11 +25,6 @@ function Main:enteredState()
     left = newAnimation(game.preloaded_image["torch_left.png"], 16, 16, 0.1, 8),
     middle = newAnimation(game.preloaded_image["torch_middle.png"], 16, 16, 0.1, 8),
     right = newAnimation(game.preloaded_image["torch_right.png"], 16, 16, 0.1, 8)
-  }
-
-  self.lights = {
-    square = game.preloaded_image["square.png"],
-    circle = game.preloaded_image["gradient_overlay.png"]
   }
 end
 
@@ -75,13 +70,6 @@ function Main:render()
       local x, y = torch.x, torch.y
       g.draw(self.light, x / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, y / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
     end
-  end
-
-  for _,light in ipairs(self.map.lights) do
-    local x, y = light.x, light.y
-    local i = self.lights[light.light_type]
-    local iw, ih = i:getWidth(), i:getHeight()
-    g.draw(i, x / 0.25 - (iw / 2 - self.map.tile_width / 0.5) - self.camera.x / 0.25, y / 0.25 - (ih / 2 - self.map.tile_height / 0.5) - self.camera.y / 0.25)
   end
 
   -- g.setColor(COLORS.blue:rgb())

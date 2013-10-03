@@ -82,23 +82,8 @@ function MapLoader.load(map_name)
         else
           g.rectangle("line", x * map_area.tile_width, y * map_area.tile_height, map_area.tile_width, map_area.tile_height)
         end
-        -- g.print(quad_index, x * map_area.tile_width, y * map_area.tile_height, 0, 0.75)
       end
     end
-
-    -- for data_index,quad_index in ipairs(tiles_metadata.data) do
-    --   local x = data_index % tiles_metadata.width
-    --   local y = math.floor(data_index / tiles_metadata.width)
-
-    --   local quad = tileset_quads[quad_index]
-
-    --   if quad_index ~= 0 then
-    --     g.drawq(tileset_data.image, quad, x * map_area.tile_width, y * map_area.tile_height)
-    --   else
-    --     g.rectangle("line", x * map_area.tile_width, y * map_area.tile_height, map_area.tile_width, map_area.tile_height)
-    --   end
-    --   g.print(quad_index, x * map_area.tile_width, y * map_area.tile_height, 0, 0.75)
-    -- end
     g.setCanvas()
     table.insert(map_area.tile_layers, canvas)
   end

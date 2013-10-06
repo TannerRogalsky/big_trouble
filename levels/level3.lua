@@ -15624,6 +15624,292 @@ return {
           properties = {
             ["on_enter"] = "maat_judgement"
           }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 80,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "left"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 80,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "right"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 368,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 368,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 32,
+          y = 544,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "left"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 112,
+          y = 496,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 144,
+          y = 544,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "right"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 544,
+          y = 176,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 352,
+          y = 656,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 448,
+          y = 640,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 640,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 864,
+          y = 448,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1072,
+          y = 480,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 736,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1088,
+          y = 1088,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1152,
+          y = 1088,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1216,
+          y = 1088,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1280,
+          y = 1088,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1088,
+          y = 1184,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1152,
+          y = 1184,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1216,
+          y = 1184,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1280,
+          y = 1184,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["torch"] = "middle"
+          }
         }
       }
     },

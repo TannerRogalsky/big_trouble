@@ -18390,6 +18390,116 @@
     <property name="on_enter" value="maat_judgement"/>
    </properties>
   </object>
+  <object x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="torch" value="left"/>
+   </properties>
+  </object>
+  <object x="240" y="80" width="16" height="16">
+   <properties>
+    <property name="torch" value="right"/>
+   </properties>
+  </object>
+  <object x="160" y="368" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="240" y="368" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="32" y="544" width="16" height="16">
+   <properties>
+    <property name="torch" value="left"/>
+   </properties>
+  </object>
+  <object x="112" y="496" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="144" y="544" width="16" height="16">
+   <properties>
+    <property name="torch" value="right"/>
+   </properties>
+  </object>
+  <object x="544" y="176" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="352" y="656" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="448" y="640" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="560" y="640" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="864" y="448" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1072" y="480" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1120" y="736" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1088" y="1088" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1152" y="1088" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1216" y="1088" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1280" y="1088" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1088" y="1184" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1152" y="1184" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1216" y="1184" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="1280" y="1184" width="16" height="16">
+   <properties>
+    <property name="torch" value="middle"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Foreground" width="99" height="99" visible="0">
   <data>

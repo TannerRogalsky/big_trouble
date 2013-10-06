@@ -73,6 +73,9 @@ function Main:render()
   g.setBlendMode("multiplicative")
   g.draw(self.overlay)
   g.setBlendMode("alpha")
+
+  g.setColor(COLORS.green:rgb())
+  g.print(love.timer.getFPS(), 0, 0)
 end
 
 function Main:mousepressed(x, y, button)

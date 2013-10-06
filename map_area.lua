@@ -49,7 +49,7 @@ function MapArea:render()
     entity:render()
   end
 
-  -- g.draw(self.tile_layers["Foreground"], 0, 0)
+  g.draw(self.tile_layers["Foreground"], 0, 0)
 end
 
 function MapArea:add_entity(entity)

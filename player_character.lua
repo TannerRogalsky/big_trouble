@@ -15,7 +15,7 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
   g.line(pixel_width / 2, 0, pixel_width / 2, pixel_height / 2)
   g.setCanvas()
 
-  self.heart_weight = 1
+  self.heart_weight = 3
 
   self.animations = {}
   for index, direction in ipairs(Direction.list) do

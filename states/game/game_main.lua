@@ -26,6 +26,13 @@ function Main:enteredState()
     middle = newAnimation(game.preloaded_image["torch_middle.png"], 16, 16, 0.1, 8),
     right = newAnimation(game.preloaded_image["torch_right.png"], 16, 16, 0.1, 8)
   }
+
+  self.heart_animations = {}
+  for i=1,5 do
+    local image = game.preloaded_image["scale (" .. i .. ").png"]
+    local animation = newAnimation(image, 32, 32, 0.2, 5)
+    self.heart_animations[i] = animation
+  end
 end
 
 function Main:update(dt)
@@ -35,6 +42,10 @@ function Main:update(dt)
 
   for _,torch_animation in pairs(self.torch_animations) do
     torch_animation:update(dt)
+  end
+
+  for _,heart_animation in pairs(self.heart_animations) do
+    heart_animation:update(dt)
   end
 end
 
@@ -73,6 +84,13 @@ function Main:render()
   g.setBlendMode("multiplicative")
   g.draw(self.overlay)
   g.setBlendMode("alpha")
+
+  -- heart ui
+  g.setColor(COLORS.white:rgb())
+  local heart_animation = self.heart_animations[self.character.heart_weight]
+  local scale = 2
+  local offset = 32
+  heart_animation:draw(g.getWidth() - heart_animation.fw * scale - offset, offset, 0, scale, scale)
 
   g.setColor(COLORS.green:rgb())
   g.print(love.timer.getFPS(), 0, 0)

@@ -35,11 +35,20 @@ function triggers.gold_temptation(tile)
   player.triggers_done["gold_temptation"] = true
 
   DialogueSystem.say(DialogueSystem.entities.Set,
-    "There is gold scattered on the floor here. Would you like to take some for yourself?", {
+    "There is gold scattered on the floor here. It doesn't belong to you but I won't stop you if you take some.", {
     ["1"] = {
       text = "Take the gold.",
       action = function()
+        player.heart_weight = player.heart_weight + 1
         DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Anubis, "The guilt of taking the gold weighs on your heart.", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
       end
     },
     ["2"] = {

@@ -21,6 +21,9 @@ function Main:enteredState()
   self.overlay = g.newCanvas(g.getWidth(), g.getHeight())
   self.light = game.preloaded_image["gradient_overlay.png"]
 
+  game.preloaded_image["torch_left.png"]:setFilter("nearest", "nearest")
+  game.preloaded_image["torch_middle.png"]:setFilter("nearest", "nearest")
+  game.preloaded_image["torch_right.png"]:setFilter("nearest", "nearest")
   self.torch_animations = {
     left = newAnimation(game.preloaded_image["torch_left.png"], 16, 16, 0.1, 8),
     middle = newAnimation(game.preloaded_image["torch_middle.png"], 16, 16, 0.1, 8),
@@ -30,6 +33,7 @@ function Main:enteredState()
   self.heart_animations = {}
   for i=1,5 do
     local image = game.preloaded_image["scale (" .. i .. ").png"]
+    image:setFilter("nearest", "nearest")
     local animation = newAnimation(image, 32, 32, 0.2, 5)
     self.heart_animations[i] = animation
   end

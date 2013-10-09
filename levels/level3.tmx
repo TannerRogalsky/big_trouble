@@ -315,7 +315,7 @@
    <tile gid="65"/>
    <tile gid="66"/>
    <tile gid="323"/>
-   <tile gid="202"/>
+   <tile gid="324"/>
    <tile gid="266"/>
    <tile gid="321"/>
    <tile gid="69"/>
@@ -9809,7 +9809,7 @@
    <tile gid="226"/>
   </data>
  </layer>
- <objectgroup name="Pathing Nodes" width="99" height="99" visible="0">
+ <objectgroup name="Pathing Nodes" width="99" height="99">
   <object name="n_0333" x="32" y="512" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -18358,8 +18358,17 @@
     <property name="sibling_west" value="n_8573"/>
    </properties>
   </object>
+  <object name="n_7548" x="1184" y="752" width="16" height="16">
+   <properties>
+    <property name="on_enter" value=""/>
+    <property name="on_exit" value=""/>
+    <property name="sibling_east" value="n_7648"/>
+    <property name="sibling_south" value="n_7549"/>
+    <property name="sibling_west" value="n_7448"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup name="Metadata Nodes" width="99" height="99">
+ <objectgroup name="Metadata Nodes" width="99" height="99" visible="0">
   <object x="192" y="32" width="16" height="16">
    <properties>
     <property name="on_enter" value="anubis_welcome"/>

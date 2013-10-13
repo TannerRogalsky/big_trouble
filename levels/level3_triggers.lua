@@ -169,7 +169,7 @@ function triggers.maat_judgement(tile)
 
   local function game_end()
     DialogueSystem.clear()
-    if player.heart_weight >= 3 then
+    if player.heart_weight <= 3 then
       game:gotoState("Win")
     else
       DialogueSystem.say(DialogueSystem.entities.Ammit,

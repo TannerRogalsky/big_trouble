@@ -166,38 +166,36 @@ end
 
 function triggers.maat_judgement(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
+
+  local function game_end()
+    DialogueSystem.clear()
+    if player.heart_weight >= 3 then
+      game:gotoState("Win")
+    else
+      DialogueSystem.say(DialogueSystem.entities.Ammit,
+        "YOU HAVE LEAD A SINFUL LIFE AND NOW I WILL EAT YOUR HEART.", {
+        [" "] = {
+          text = "Press Space to have your heart eaten.",
+          action = function()
+            DialogueSystem.clear()
+            game:gotoState("Lose")
+          end
+        }
+      })
+    end
+  end
+
   DialogueSystem.say(DialogueSystem.entities.Maat,
-    "Your heart will now be weighed.", {
+    "Your heart will now be weighed. If it is heavy with your sin, Ammit will eat your heart and you will be doomed to wander the Duat forever. If you have been virtuous, you will board Ra's barque to the afterlife.", {
     ["1"] = {
       text = "Thank you, Goddess Ma'at.",
-      action = function()
-        DialogueSystem.clear()
-        DialogueSystem.say(DialogueSystem.entities.Ammit,
-          "YOU HAVE LEAD A SINFUL LIFE AND NOW I WILL EAT YOUR HEART.", {
-          [" "] = {
-            text = "Press Space to have your heart eaten.",
-            action = function()
-              DialogueSystem.clear()
-              game:gotoState("Lose")
-            end
-          }
-        })
-      end
+      action = game_end
     },
     ["2"] = {
       text = "Lighten the weight of your heart with a spell from the Book of the Dead.",
       action = function()
-        DialogueSystem.clear()
-        DialogueSystem.say(DialogueSystem.entities.Maat,
-          "You have lead a virtuous life, mortal. You may board Ra's boat to the afterlife.", {
-          [" "] = {
-            text = "Press Space to go to the afterlife.",
-            action = function()
-              DialogueSystem.clear()
-              game:gotoState("Win")
-            end
-          }
-        })
+        player:delta_heart(-1)
+        game_end()
       end
     }
   })

@@ -147,7 +147,7 @@ return {
     {
       type = "objectgroup",
       name = "Pathing Nodes",
-      visible = true,
+      visible = false,
       opacity = 1,
       properties = {},
       objects = {
@@ -15561,7 +15561,7 @@ return {
     {
       type = "objectgroup",
       name = "Metadata Nodes",
-      visible = false,
+      visible = true,
       opacity = 1,
       properties = {},
       objects = {
@@ -15927,6 +15927,19 @@ return {
           visible = true,
           properties = {
             ["torch"] = "middle"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 288,
+          y = 368,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle1"
           }
         }
       }

@@ -45,6 +45,11 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
   self.triggers_done = {}
 end
 
+function PlayerCharacter:delta_heart(weight_delta)
+  self.heart_weight = math.clamp(1, self.heart_weight + weight_delta, 5)
+  return self.heart_weight
+end
+
 function PlayerCharacter:update(dt)
   local actions = self.controls.keyboard.update
   for key,action in pairs(actions) do

@@ -9809,7 +9809,7 @@
    <tile gid="226"/>
   </data>
  </layer>
- <objectgroup name="Pathing Nodes" width="99" height="99">
+ <objectgroup name="Pathing Nodes" width="99" height="99" visible="0">
   <object name="n_0333" x="32" y="512" width="16" height="16">
    <properties>
     <property name="on_enter" value=""/>
@@ -18368,7 +18368,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Metadata Nodes" width="99" height="99" visible="0">
+ <objectgroup name="Metadata Nodes" width="99" height="99">
   <object x="192" y="32" width="16" height="16">
    <properties>
     <property name="on_enter" value="anubis_welcome"/>
@@ -18507,6 +18507,11 @@
   <object x="1280" y="1184" width="16" height="16">
    <properties>
     <property name="torch" value="middle"/>
+   </properties>
+  </object>
+  <object x="288" y="368" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle1"/>
    </properties>
   </object>
  </objectgroup>

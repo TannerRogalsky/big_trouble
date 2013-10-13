@@ -32,21 +32,31 @@ function DialogueSystem.say(entity, text, callbacks)
   g.setColor(COLORS.black:rgb())
 
   h = h + 70
-  g.printf(entity.name .. ": " .. text, h, 70, 800)
+  local full_text = entity.name .. ": " .. text
+  g.printf(full_text, h, 70, 800)
+  local full_width = game.default_font:getWidth(full_text)
+  local lines = math.ceil(full_width / (800 - 70))
+  -- print(lines, full_text)
 
   local height = game.default_font:getHeight()
+  local callback_keys = {}
+  for k,_ in pairs(callbacks) do
+    table.insert(callback_keys, k)
+  end
+  table.sort(callback_keys)
 
   DialogueSystem.callbacks = callbacks
   if DialogueSystem.callbacks then
-    local index = 7
-    for key,callback_table in pairs(DialogueSystem.callbacks) do
+    local index = lines + 3
+    for _,key in ipairs(callback_keys) do
+      callback_table = DialogueSystem.callbacks[key]
       local text = ""
       if key == " " then
         text = callback_table.text
       else
         text = key .. ". " .. callback_table.text
       end
-      g.print(text, h, index * height)
+      g.print(text, h, index * height + height / 2)
       index = index + 1
     end
   end

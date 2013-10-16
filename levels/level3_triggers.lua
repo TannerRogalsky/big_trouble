@@ -130,7 +130,7 @@ function triggers.set_riddle2(tile)
         wrong_answer()
       end
     },
-    ["3"] = {
+    ["2"] = {
       text = "The Book of the Dead.",
       action = function()
         player:delta_heart(-1)
@@ -205,6 +205,108 @@ function triggers.set_riddle3(tile)
     },
     ["4"] = {
       text = "A cat!",
+      action = function()
+        wrong_answer()
+      end
+    }
+  })
+end
+
+function triggers.set_riddle4(tile)
+  local player = tile:get_first_content_of_type(PlayerCharacter)
+  if player.triggers_done["set_riddle4"] then return end
+
+  local function wrong_answer()
+    DialogueSystem.clear()
+    DialogueSystem.say(DialogueSystem.entities.Set, "You may not pass until you answer correctly, mortal.", {
+      [" "] = {
+        text = "Press Space to continue.",
+        action = function()
+          player:delta_heart(1)
+          DialogueSystem.clear()
+          player:request_movement(Direction.WEST)
+        end
+      }
+    })
+  end
+
+  DialogueSystem.say(DialogueSystem.entities.Set,
+    "Mortal!  If you pass Maat's final judgement, which god will take you to the afterlife in his boat?", {
+    ["1"] = {
+      text = "Charon",
+      action = function()
+        wrong_answer()
+      end
+    },
+    ["3"] = {
+      text = "Ra",
+      action = function()
+        player:delta_heart(-1)
+        player.triggers_done["set_riddle4"] = true
+        DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Set, "You know the gods well, mortal...", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
+      end
+    },
+    ["2"] = {
+      text = "Anubis",
+      action = function()
+        wrong_answer()
+      end
+    }
+  })
+end
+
+function triggers.set_riddle5(tile)
+  local player = tile:get_first_content_of_type(PlayerCharacter)
+  if player.triggers_done["set_riddle5"] then return end
+
+  local function wrong_answer()
+    DialogueSystem.clear()
+    DialogueSystem.say(DialogueSystem.entities.Set, "You may not pass until you answer correctly, mortal.", {
+      [" "] = {
+        text = "Press Space to continue.",
+        action = function()
+          player:delta_heart(1)
+          DialogueSystem.clear()
+          player:request_movement(Direction.WEST)
+        end
+      }
+    })
+  end
+
+  DialogueSystem.say(DialogueSystem.entities.Set,
+    "Your immortal eternity is in dire peril, mortal.  If your heart is deemed heavy, which demon will happily devour your soul?", {
+    ["1"] = {
+      text = "Ma'at",
+      action = function()
+        wrong_answer()
+      end
+    },
+    ["2"] = {
+      text = "Ammit",
+      action = function()
+        player:delta_heart(-1)
+        player.triggers_done["set_riddle5"] = true
+        DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Set, "You know the gods well, mortal...", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
+      end
+    },
+    ["3"] = {
+      text = "Falcor",
       action = function()
         wrong_answer()
       end

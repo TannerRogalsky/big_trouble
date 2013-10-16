@@ -12,7 +12,8 @@ DialogueSystem.static.entities = {
   Anubis = DialogueEntity:new("Anubis", g.newImage("images/anubis_bust.png")),
   Maat = DialogueEntity:new("Ma'at", g.newImage("images/maat_bust.png")),
   Set = DialogueEntity:new("Set", g.newImage("images/set_bust.png")),
-  Ammit = DialogueEntity:new("Ammit", g.newImage("images/ammit_bust.png"))
+  Ammit = DialogueEntity:new("Ammit", g.newImage("images/ammit_bust.png")),
+  Osiris = DialogueEntity:new("Osiris", g.newImage("images/osiris_bust.png"))
 }
 local active = false
 DialogueSystem.static.callbacks = nil

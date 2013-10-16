@@ -6,7 +6,7 @@ function triggers.anubis_welcome(tile)
   player.triggers_done["anubis_welcome"] = true
 
   DialogueSystem.say(DialogueSystem.entities.Anubis,
-    "Welcome to the Duat, mortal. You will need to navigate these trials before you are allowed into the afterlife.", {
+    "Welcome to the Duat, mortal. You will need to navigate these trials before you are allowed into the afterlife. I am Anubis, the jackal-headed. I will be your guide.", {
     [" "] = {
       text = "Press Space to continue.",
       action = function()
@@ -33,6 +33,15 @@ function triggers.anubis_warn(tile)
       text = "Press Space to continue.",
       action = function()
         DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Anubis,
+          "The Book of the Dead contains many secrets and spells to help you in your journey. It was produced by scribes before your death and buried with you so that you could bring it to the Duat.", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
       end
     }
   })
@@ -48,6 +57,7 @@ function triggers.set_riddle1(tile)
       [" "] = {
         text = "Press Space to continue.",
         action = function()
+          player:delta_heart(1)
           DialogueSystem.clear()
           player:request_movement(Direction.WEST)
         end
@@ -87,6 +97,114 @@ function triggers.set_riddle1(tile)
     },
     ["4"] = {
       text = "The rising sun.",
+      action = function()
+        wrong_answer()
+      end
+    }
+  })
+end
+
+function triggers.set_riddle2(tile)
+  local player = tile:get_first_content_of_type(PlayerCharacter)
+  if player.triggers_done["set_riddle2"] then return end
+
+  local function wrong_answer()
+    DialogueSystem.clear()
+    DialogueSystem.say(DialogueSystem.entities.Set, "You may not pass until you answer correctly, mortal.", {
+      [" "] = {
+        text = "Press Space to continue.",
+        action = function()
+          player:delta_heart(1)
+          DialogueSystem.clear()
+          player:request_movement(Direction.WEST)
+        end
+      }
+    })
+  end
+
+  DialogueSystem.say(DialogueSystem.entities.Set,
+    "Stop, mortal! Answer my riddle: what is the name of the text that aids you in your journey?", {
+    ["1"] = {
+      text = "Afterlife For Dummies.",
+      action = function()
+        wrong_answer()
+      end
+    },
+    ["3"] = {
+      text = "The Book of the Dead.",
+      action = function()
+        player:delta_heart(-1)
+        player.triggers_done["set_riddle2"] = true
+        DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Set, "GAH! That was meant to be a hard one!", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
+      end
+    },
+    ["3"] = {
+      text = "Osiris' Handbook",
+      action = function()
+        wrong_answer()
+      end
+    }
+  })
+end
+
+function triggers.set_riddle3(tile)
+  local player = tile:get_first_content_of_type(PlayerCharacter)
+  if player.triggers_done["set_riddle3"] then return end
+
+  local function wrong_answer()
+    DialogueSystem.clear()
+    DialogueSystem.say(DialogueSystem.entities.Set, "You may not pass until you answer correctly, mortal.", {
+      [" "] = {
+        text = "Press Space to continue.",
+        action = function()
+          player:delta_heart(1)
+          DialogueSystem.clear()
+          player:request_movement(Direction.WEST)
+        end
+      }
+    })
+  end
+
+  DialogueSystem.say(DialogueSystem.entities.Set,
+    "One more riddle, mortal! What animal does Anubis, your guide, look like?", {
+    ["2"] = {
+      text = "A hippo!",
+      action = function()
+        wrong_answer()
+      end
+    },
+    ["1"] = {
+      text = "A jackal!",
+      action = function()
+        player:delta_heart(-1)
+        player.triggers_done["set_riddle3"] = true
+        DialogueSystem.clear()
+        DialogueSystem.say(DialogueSystem.entities.Set, "You must be the smartest mortal that has ever died!", {
+          [" "] = {
+            text = "Press Space to continue.",
+            action = function()
+              DialogueSystem.clear()
+            end
+          }
+        })
+      end
+    },
+    ["3"] = {
+      text = "A crocodile!",
+      action = function()
+        wrong_answer()
+      end
+    },
+    ["4"] = {
+      text = "A cat!",
       action = function()
         wrong_answer()
       end
@@ -173,7 +291,7 @@ function triggers.maat_judgement(tile)
       game:gotoState("Win")
     else
       DialogueSystem.say(DialogueSystem.entities.Ammit,
-        "YOU HAVE LEAD A SINFUL LIFE AND NOW I WILL EAT YOUR HEART.", {
+        "YOUR HEART IS TOO HEAVY! YOU HAVE LEAD A SINFUL LIFE AND NOW I WILL EAT YOUR HEART.", {
         [" "] = {
           text = "Press Space to have your heart eaten.",
           action = function()
@@ -185,10 +303,10 @@ function triggers.maat_judgement(tile)
     end
   end
 
-  DialogueSystem.say(DialogueSystem.entities.Maat,
+  DialogueSystem.say(DialogueSystem.entities.Osiris,
     "Your heart will now be weighed. If it is heavy with your sin, Ammit will eat your heart and you will be doomed to wander the Duat forever. If you have been virtuous, you will board Ra's barque to the afterlife.", {
     ["1"] = {
-      text = "Thank you, Goddess Ma'at.",
+      text = "Thank you, Osiris.",
       action = game_end
     },
     ["2"] = {

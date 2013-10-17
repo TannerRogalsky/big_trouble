@@ -26,7 +26,7 @@ end
 
 function Win:keypressed(key, unicode)
   if key == "return" then
-    self:gotoState("Main")
+    self:gotoState("Menu")
   end
 end
 

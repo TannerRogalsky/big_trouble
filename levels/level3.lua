@@ -15933,13 +15933,91 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 288,
+          x = 416,
           y = 368,
           width = 16,
           height = 16,
           visible = true,
           properties = {
             ["on_enter"] = "set_riddle1"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 864,
+          y = 640,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle2"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1088,
+          y = 560,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle3"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1104,
+          y = 560,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle3"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 560,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle3"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1136,
+          y = 560,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle3"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1040,
+          y = 1136,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "set_riddle4"
           }
         }
       }

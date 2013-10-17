@@ -167,7 +167,7 @@ function triggers.set_riddle3(tile)
         action = function()
           player:delta_heart(1)
           DialogueSystem.clear()
-          player:request_movement(Direction.WEST)
+          player:request_movement(Direction.NORTH)
         end
       }
     })

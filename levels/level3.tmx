@@ -18509,9 +18509,39 @@
     <property name="torch" value="middle"/>
    </properties>
   </object>
-  <object x="288" y="368" width="16" height="16">
+  <object x="416" y="368" width="16" height="16">
    <properties>
     <property name="on_enter" value="set_riddle1"/>
+   </properties>
+  </object>
+  <object x="864" y="640" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle2"/>
+   </properties>
+  </object>
+  <object x="1088" y="560" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle3"/>
+   </properties>
+  </object>
+  <object x="1104" y="560" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle3"/>
+   </properties>
+  </object>
+  <object x="1120" y="560" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle3"/>
+   </properties>
+  </object>
+  <object x="1136" y="560" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle3"/>
+   </properties>
+  </object>
+  <object x="1040" y="1136" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="set_riddle4"/>
    </properties>
   </object>
  </objectgroup>

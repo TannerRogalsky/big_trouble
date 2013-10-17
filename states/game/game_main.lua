@@ -3,6 +3,10 @@ local Main = Game:addState('Main')
 function Main:enteredState()
   Collider = HC(100, self.on_start_collide, self.on_stop_collide)
 
+  -- self.heartbeat = love.audio.newSource("sounds/Heartbeat.wav")
+  -- self.heartbeat:play()
+  -- self.heartbeat:setLooping(true)
+
   if self.map == nil then
     self.map = MapLoader.load("level3")
   end

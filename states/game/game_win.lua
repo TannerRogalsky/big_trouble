@@ -24,7 +24,7 @@ function Win:render()
   g.printf("Press Enter to try again.", 0, g.getHeight() - 80, g.getWidth(), "center")
 end
 
-function Win:keypressed(key, unicode)
+function Win:keyreleased(key, unicode)
   if key == "return" then
     self:gotoState("Menu")
   end

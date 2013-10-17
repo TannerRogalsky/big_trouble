@@ -28,8 +28,7 @@ return {
       name = "Background",
       visible = false,
       opacity = 1,
-      image = "",
-      properties = {}
+      image = ""
     },
     {
       type = "tilelayer",
@@ -16018,6 +16017,19 @@ return {
           visible = true,
           properties = {
             ["on_enter"] = "set_riddle4"
+          }
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 976,
+          y = 896,
+          width = 16,
+          height = 16,
+          visible = true,
+          properties = {
+            ["on_enter"] = "anubis_congrats"
           }
         }
       }

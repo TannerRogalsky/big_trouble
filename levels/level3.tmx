@@ -18544,6 +18544,11 @@
     <property name="on_enter" value="set_riddle4"/>
    </properties>
   </object>
+  <object x="976" y="896" width="16" height="16">
+   <properties>
+    <property name="on_enter" value="anubis_congrats"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Foreground" width="99" height="99" visible="0">
   <data>

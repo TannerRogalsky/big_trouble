@@ -24,7 +24,7 @@ function Lose:render()
   g.printf("Press Enter to try again.", 0, g.getHeight() - 40, g.getWidth(), "center")
 end
 
-function Lose:keypressed(key, unicode)
+function Lose:keyreleased(key, unicode)
   if key == "return" then
     self:gotoState("Menu")
   end

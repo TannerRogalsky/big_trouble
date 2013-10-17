@@ -212,6 +212,22 @@ function triggers.set_riddle3(tile)
   })
 end
 
+function triggers.anubis_congrats(tile)
+  local player = tile:get_first_content_of_type(PlayerCharacter)
+  if player.triggers_done["anubis_congrats"] then return end
+  player.triggers_done["anubis_congrats"] = true
+
+  DialogueSystem.say(DialogueSystem.entities.Anubis,
+    "You are doing well, mortal. Your journey is almost complete! Ra, the sun god, waits in his boat to carry you to the afterlife in his boat if your heart is not too heavy.", {
+    [" "] = {
+      text = "Press Space to continue.",
+      action = function()
+        DialogueSystem.clear()
+      end
+    }
+  })
+end
+
 function triggers.set_riddle4(tile)
   local player = tile:get_first_content_of_type(PlayerCharacter)
   if player.triggers_done["set_riddle4"] then return end

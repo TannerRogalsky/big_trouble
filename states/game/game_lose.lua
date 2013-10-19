@@ -1,8 +1,6 @@
 local Lose = Game:addState('Lose')
 
 function Lose:enteredState()
-  self.map:clear_entities()
-
   self.bg = self.preloaded_image["apep.jpg"]
   self.scalex = g.getWidth() / self.bg:getWidth()
   self.scaley = g.getHeight() / self.bg:getHeight()

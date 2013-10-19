@@ -1,8 +1,6 @@
 local Win = Game:addState('Win')
 
 function Win:enteredState()
-  self.map:clear_entities()
-
   self.bg = self.preloaded_image["barque_of_ra.jpg"]
   self.scalex = g.getWidth() / self.bg:getWidth()
   self.scaley = g.getHeight() / self.bg:getHeight()

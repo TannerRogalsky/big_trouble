@@ -117,6 +117,9 @@ function Main:keypressed(key, unicode)
 end
 
 function Main:keyreleased(key, unicode)
+  if key == "m" then
+    self:gotoState("Menu")
+  end
 end
 
 function Main:joystickpressed(joystick, button)
@@ -149,6 +152,8 @@ end
 function Main:exitedState()
   Collider:clear()
   Collider = nil
+
+  self.map:clear_entities()
 end
 
 return Main

@@ -16,6 +16,7 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
   g.setCanvas()
 
   self.heart_weight = 3
+  self.has_scales = false
 
   self.animations = {}
   for index, direction in ipairs(Direction.list) do

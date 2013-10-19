@@ -6,17 +6,27 @@ function triggers.anubis_welcome(tile)
   player.triggers_done["anubis_welcome"] = true
 
   DialogueSystem.say(DialogueSystem.entities.Anubis,
-    "Welcome to the Duat, mortal. You will need to navigate these trials before you are allowed into the afterlife. I am Anubis, the jackal-headed. I will be your guide.", {
+    "Welcome to the Duat, mortal, the Egyption underworld. You will need to navigate these trials before you are allowed into the afterlife. I am Anubis, the jackal-headed. I will be your guide.", {
     [" "] = {
       text = "Press Space to continue.",
       action = function()
         DialogueSystem.clear()
         DialogueSystem.say(DialogueSystem.entities.Anubis,
-          "If you manage to make it to the end of your journey, your heart will be weighed against Maat, the feather-goddess of judgement. The guilt of sin will weigh on your heart. Be warned!", {
+          "First, take these SCALES. They will be show you if your heart is lighter or heavier than a feather.", {
           [" "] = {
-            text = "Press Space to continue.",
+            text = "Press Space to take the scales.",
             action = function()
               DialogueSystem.clear()
+              player.has_scales = true
+              DialogueSystem.say(DialogueSystem.entities.Anubis,
+                "If you manage to make it to the end of your journey, your heart will be weighed against Maat, the FEATHER-GODDESS of judgement. The guilt of sin will weigh on your heart. Be warned!", {
+                [" "] = {
+                  text = "Press Space to continue.",
+                  action = function()
+                    DialogueSystem.clear()
+                  end
+                }
+              })
             end
           }
         })
@@ -34,7 +44,7 @@ function triggers.anubis_warn(tile)
       action = function()
         DialogueSystem.clear()
         DialogueSystem.say(DialogueSystem.entities.Anubis,
-          "The Book of the Dead contains many secrets and spells to help you in your journey. It was produced by scribes before your death and buried with you so that you could bring it to the Duat.", {
+          "The BOOK OF THE DEAD contains many secrets and spells to help you in your journey. It was produced by scribes before your death and buried with you so that you could bring it to the Duat.", {
           [" "] = {
             text = "Press Space to continue.",
             action = function()
@@ -218,7 +228,7 @@ function triggers.anubis_congrats(tile)
   player.triggers_done["anubis_congrats"] = true
 
   DialogueSystem.say(DialogueSystem.entities.Anubis,
-    "You are doing well, mortal. Your journey is almost complete! Ra, the sun god, waits in his boat to carry you to the afterlife in his boat if your heart is not too heavy.", {
+    "You are doing well, mortal. Your journey is almost complete! Ra, the sun god, waits to carry you to the afterlife in his boat if your heart is not too heavy.", {
     [" "] = {
       text = "Press Space to continue.",
       action = function()
@@ -406,7 +416,16 @@ function triggers.maat_judgement(tile)
   local function game_end()
     DialogueSystem.clear()
     if player.heart_weight <= 3 then
-      game:gotoState("Win")
+      DialogueSystem.say(DialogueSystem.entities.Osiris,
+        "You have been found virtuous, mortal. Prepare yourself for your journey to the afterlife!", {
+        [" "] = {
+          text = "Press Space to board Ra's barque.",
+          action = function()
+            DialogueSystem.clear()
+            game:gotoState("Win")
+          end
+        }
+      })
     else
       DialogueSystem.say(DialogueSystem.entities.Ammit,
         "YOUR HEART IS TOO HEAVY! YOU HAVE LEAD A SINFUL LIFE AND NOW I WILL EAT YOUR HEART.", {

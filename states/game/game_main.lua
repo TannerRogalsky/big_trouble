@@ -93,15 +93,17 @@ function Main:render()
   g.draw(self.overlay)
   g.setBlendMode("alpha")
 
-  -- heart ui
-  g.setColor(COLORS.white:rgb())
-  local heart_animation = self.heart_animations[self.character.heart_weight]
-  local scale = 2
-  local offset = 32
-  heart_animation:draw(g.getWidth() - heart_animation.fw * scale - offset, offset, 0, scale, scale)
+  if self.character.has_scales then
+    -- heart ui
+    g.setColor(COLORS.white:rgb())
+    local heart_animation = self.heart_animations[self.character.heart_weight]
+    local scale = 2
+    local offset = 32
+    heart_animation:draw(g.getWidth() - heart_animation.fw * scale - offset, offset, 0, scale, scale)
+  end
 
-  g.setColor(COLORS.green:rgb())
-  g.print(love.timer.getFPS(), 0, 0)
+  -- g.setColor(COLORS.green:rgb())
+  -- g.print(love.timer.getFPS(), 0, 0)
 end
 
 function Main:mousepressed(x, y, button)

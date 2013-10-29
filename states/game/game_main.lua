@@ -154,6 +154,7 @@ function Main:exitedState()
   Collider = nil
 
   self.map:clear_entities()
+  DialogueSystem.clear()
 end
 
 return Main

@@ -12,7 +12,7 @@ function triggers.anubis_welcome(tile)
       action = function()
         DialogueSystem.clear()
         DialogueSystem.say(DialogueSystem.entities.Anubis,
-          "First, take these SCALES. They will be show you if your heart is lighter or heavier than a feather.", {
+          "First, take these SCALES. They will show you if your heart is lighter or heavier than a feather.", {
           [" "] = {
             text = "Press Space to take the scales.",
             action = function()

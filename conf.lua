@@ -1,6 +1,6 @@
 function love.conf(t)
     t.title = "A Funny Thing Happened On The Way To The Afterlife"        -- The title of the window the game is in (string)
-    t.author = "Tanner Rogalsky"        -- The author of the game (string)
+    t.author = "Tanner Rogalsky (647) 391-1599 tanner@tannerrogalsky.com"        -- The author of the game (string)
     t.identity = "romjamgame_afterlife"            -- The name of the save directory (string)
     t.version = "0.8.0"         -- The LÖVE version this game was made for (string)
     -- t.console = true           -- Attach a console (boolean, Windows only)

@@ -29,14 +29,15 @@ function DialogueSystem.say(entity, text, callbacks)
   g.setCanvas(c)
   g.setColor(COLORS.white:rgb())
   local h = c:getHeight()
-  g.draw(entity.image, 0, 0, 0, h / entity.image:getWidth())
-  g.draw(DialogueSystem.background, h, 0, 0, 1.24, 1)
+  g.draw(entity.image, 0, -25, 0, h / entity.image:getWidth() * 1.2)
+  local bw, bh = DialogueSystem.background:getWidth(), DialogueSystem.background:getHeight()
+  g.draw(DialogueSystem.background, h, 0, 0, 1000 / bw, g.getHeight() / 3 / bh)
   -- g.rectangle("fill", h, 0, c:getWidth(), h)
   g.setColor(COLORS.black:rgb())
 
   h = h + 70
   local full_text = entity.name .. ": " .. text
-  g.printf(full_text, h, 70, 800)
+  g.printf(full_text, h, 50, 800)
   local full_width = game.default_font:getWidth(full_text)
   local lines = math.ceil(full_width / (800 - 70))
   -- print(lines, full_text)
@@ -50,7 +51,7 @@ function DialogueSystem.say(entity, text, callbacks)
 
   DialogueSystem.callbacks = callbacks
   if DialogueSystem.callbacks then
-    local index = lines + 3
+    local index = lines + 2
     for _,key in ipairs(callback_keys) do
       callback_table = DialogueSystem.callbacks[key]
       local text = ""

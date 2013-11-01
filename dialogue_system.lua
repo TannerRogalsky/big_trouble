@@ -6,19 +6,21 @@ function DialogueEntity:initialize(name, image)
 
   self.name = name
   self.image = image
+  self.image:setFilter("nearest", "nearest")
 end
 
 DialogueSystem.static.entities = {
-  Anubis = DialogueEntity:new("Anubis", g.newImage("images/anubis_bust.png")),
-  Maat = DialogueEntity:new("Ma'at", g.newImage("images/maat_bust.png")),
-  Set = DialogueEntity:new("Set", g.newImage("images/set_bust.png")),
-  Ammit = DialogueEntity:new("Ammit", g.newImage("images/ammit_bust.png")),
-  Osiris = DialogueEntity:new("Osiris", g.newImage("images/osiris_bust.png"))
+  Anubis = DialogueEntity:new("Anubis", g.newImage("images/anubis.png")),
+  Maat = DialogueEntity:new("Ma'at", g.newImage("images/maat.png")),
+  Set = DialogueEntity:new("Set", g.newImage("images/set.png")),
+  Ammit = DialogueEntity:new("Ammit", g.newImage("images/ammit.png")),
+  Osiris = DialogueEntity:new("Osiris", g.newImage("images/osiris.png"))
 }
 local active = false
 DialogueSystem.static.callbacks = nil
 DialogueSystem.static.render_surface = g.newCanvas(g.getWidth(), g.getHeight() / 3)
-DialogueSystem.static.background = g.newImage("images/parchement.png")
+DialogueSystem.static.background = g.newImage("images/paper.png")
+DialogueSystem.static.background:setFilter("nearest", "nearest")
 
 function DialogueSystem.say(entity, text, callbacks)
   game.character:gotoState("NotMoving")

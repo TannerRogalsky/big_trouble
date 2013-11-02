@@ -13,6 +13,10 @@ function Menu:keyreleased()
   self:gotoState("Main")
 end
 
+function Menu:joystickreleased()
+  self:gotoState("Main")
+end
+
 function Menu:mousereleased()
   self:gotoState("Main")
 end

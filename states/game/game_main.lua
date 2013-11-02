@@ -123,9 +123,11 @@ function Main:keyreleased(key, unicode)
 end
 
 function Main:joystickpressed(joystick, button)
+  -- print(joystick, button)
 end
 
 function Main:joystickreleased(joystick, button)
+  -- print(joystick, button)
 end
 
 function Main:focus(has_focus)

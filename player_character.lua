@@ -40,6 +40,11 @@ function PlayerCharacter:initialize(parent, x, y, width, height)
         -- left = self.keypressed_left,
         -- right = self.keypressed_right
       }
+    }, joystick = {
+      up = self.keyupdate_up,
+      down = self.keyupdate_down,
+      left = self.keyupdate_left,
+      right = self.keyupdate_right
     }
   }
 
@@ -56,6 +61,12 @@ function PlayerCharacter:update(dt)
   for key,action in pairs(actions) do
     if love.keyboard.isDown(key) then action(self) end
   end
+
+  actions = self.controls.joystick
+  for key,action in pairs(actions) do
+    if love.joystick.isDown(1, joy_to_key[key]) then action(self) end
+  end
+
   if self.movement_tween then
     self.animation:update(dt)
   end

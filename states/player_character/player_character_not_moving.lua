@@ -16,6 +16,8 @@ function NotMoving:enteredState()
         -- left = self.keypressed_left,
         -- right = self.keypressed_right
       }
+    }, joystick = {
+
     }
   }
 end

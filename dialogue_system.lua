@@ -86,6 +86,13 @@ function DialogueSystem.keypressed(key, unicode)
   end
 end
 
+function DialogueSystem.joystickpressed(joystick, button)
+  local key = joy_to_key[button]
+  if DialogueSystem.callbacks and DialogueSystem.callbacks[key] then
+    DialogueSystem.callbacks[key].action()
+  end
+end
+
 function DialogueSystem.clear()
   game.character:gotoState()
   DialogueSystem.render_surface:clear()

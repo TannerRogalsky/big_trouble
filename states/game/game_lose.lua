@@ -20,11 +20,18 @@ function Lose:render()
   -- g.setFont(self.default_font)
 
   g.setColor(COLORS.white:rgb())
-  g.printf("Press Enter to try again.", 0, g.getHeight() - 80, g.getWidth(), "center")
+  g.printf("Press 'Start' to try again.", 0, g.getHeight() - 80, g.getWidth(), "center")
 end
 
 function Lose:keyreleased(key, unicode)
   if key == "return" then
+    self:gotoState("Menu")
+  end
+end
+
+function Lose:joystickreleased(joystick, button)
+  local key = joy_to_key[button]
+  if key == "Start" then
     self:gotoState("Menu")
   end
 end

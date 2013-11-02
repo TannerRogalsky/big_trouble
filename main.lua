@@ -3,7 +3,7 @@ love.filesystem.load('requirements.lua')()
 function love.load()
   game = Game:new()
   local bg_music = love.audio.newSource("sounds/bg_music.ogg")
-  bg_music:play()
+  -- bg_music:play()
   bg_music:setLooping(true)
 end
 
@@ -41,7 +41,9 @@ function love.keyreleased(key, unicode)
 end
 
 function love.joystickpressed(joystick, button)
+  -- print(button)
   game:joystickpressed(joystick, button)
+  DialogueSystem.joystickpressed(joystick, button)
 end
 
 function love.joystickreleased(joystick, button)

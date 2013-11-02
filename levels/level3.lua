@@ -28,7 +28,8 @@ return {
       name = "Background",
       visible = false,
       opacity = 1,
-      image = ""
+      image = "",
+      properties = {}
     },
     {
       type = "tilelayer",
@@ -146,7 +147,7 @@ return {
     {
       type = "objectgroup",
       name = "Pathing Nodes",
-      visible = false,
+      visible = true,
       opacity = 1,
       properties = {},
       objects = {
@@ -8447,24 +8448,6 @@ return {
           }
         },
         {
-          name = "n_3817",
-          type = "",
-          shape = "rectangle",
-          x = 592,
-          y = 256,
-          width = 16,
-          height = 16,
-          visible = true,
-          properties = {
-            ["on_enter"] = "",
-            ["on_exit"] = "",
-            ["sibling_east"] = "n_3917",
-            ["sibling_north"] = "n_3816",
-            ["sibling_south"] = "n_3818",
-            ["sibling_west"] = "n_3717"
-          }
-        },
-        {
           name = "n_3818",
           type = "",
           shape = "rectangle",
@@ -8552,24 +8535,6 @@ return {
             ["sibling_north"] = "n_3842",
             ["sibling_south"] = "n_3844",
             ["sibling_west"] = "n_3743"
-          }
-        },
-        {
-          name = "n_3917",
-          type = "",
-          shape = "rectangle",
-          x = 608,
-          y = 256,
-          width = 16,
-          height = 16,
-          visible = true,
-          properties = {
-            ["on_enter"] = "",
-            ["on_exit"] = "",
-            ["sibling_east"] = "n_4017",
-            ["sibling_north"] = "n_3916",
-            ["sibling_south"] = "n_3918",
-            ["sibling_west"] = "n_3817"
           }
         },
         {
@@ -8663,24 +8628,6 @@ return {
           }
         },
         {
-          name = "n_4017",
-          type = "",
-          shape = "rectangle",
-          x = 624,
-          y = 256,
-          width = 16,
-          height = 16,
-          visible = true,
-          properties = {
-            ["on_enter"] = "",
-            ["on_exit"] = "",
-            ["sibling_east"] = "n_4117",
-            ["sibling_north"] = "n_4016",
-            ["sibling_south"] = "n_4018",
-            ["sibling_west"] = "n_3917"
-          }
-        },
-        {
           name = "n_4018",
           type = "",
           shape = "rectangle",
@@ -8717,24 +8664,6 @@ return {
           }
         },
         {
-          name = "n_4117",
-          type = "",
-          shape = "rectangle",
-          x = 640,
-          y = 256,
-          width = 16,
-          height = 16,
-          visible = true,
-          properties = {
-            ["on_enter"] = "",
-            ["on_exit"] = "",
-            ["sibling_east"] = "n_4217",
-            ["sibling_north"] = "n_4116",
-            ["sibling_south"] = "n_4118",
-            ["sibling_west"] = "n_4017"
-          }
-        },
-        {
           name = "n_4118",
           type = "",
           shape = "rectangle",
@@ -8768,24 +8697,6 @@ return {
             ["sibling_north"] = "n_4140",
             ["sibling_south"] = "n_4142",
             ["sibling_west"] = "n_4041"
-          }
-        },
-        {
-          name = "n_4217",
-          type = "",
-          shape = "rectangle",
-          x = 656,
-          y = 256,
-          width = 16,
-          height = 16,
-          visible = true,
-          properties = {
-            ["on_enter"] = "",
-            ["on_exit"] = "",
-            ["sibling_east"] = "n_4317",
-            ["sibling_north"] = "n_4216",
-            ["sibling_south"] = "n_4218",
-            ["sibling_west"] = "n_4117"
           }
         },
         {
@@ -15560,7 +15471,7 @@ return {
     {
       type = "objectgroup",
       name = "Metadata Nodes",
-      visible = true,
+      visible = false,
       opacity = 1,
       properties = {},
       objects = {

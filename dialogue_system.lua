@@ -96,5 +96,6 @@ end
 function DialogueSystem.clear()
   game.character:gotoState()
   DialogueSystem.render_surface:clear()
+  DialogueSystem.callbacks = nil
   active = false
 end

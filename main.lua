@@ -41,7 +41,7 @@ function love.keyreleased(key, unicode)
 end
 
 function love.joystickpressed(joystick, button)
-  -- print(button)
+  print(button)
   game:joystickpressed(joystick, button)
   DialogueSystem.joystickpressed(joystick, button)
 end

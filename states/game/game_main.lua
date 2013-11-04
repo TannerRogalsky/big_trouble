@@ -19,7 +19,7 @@ function Main:enteredState()
   -- cbounds.positive_x = self.map.width * self.map.tile_width - g.getWidth()
   -- cbounds.positive_y = self.map.height * self.map.tile_height - g.getHeight()
 
-  self.character = PlayerCharacter:new(self.map, 13, 1, 1, 1)
+  self.character = PlayerCharacter:new(self.map, 13, 2, 1, 1)
   self.map:add_entity(self.character)
 
   self.overlay = g.newCanvas(g.getWidth(), g.getHeight())
@@ -128,6 +128,9 @@ end
 
 function Main:joystickreleased(joystick, button)
   -- print(joystick, button)
+  if button == 6 then
+    self:gotoState("Menu")
+  end
 end
 
 function Main:focus(has_focus)
@@ -152,6 +155,7 @@ function Main.on_stop_collide(dt, shape_one, shape_two)
 end
 
 function Main:exitedState()
+  DialogueSystem.clear()
   Collider:clear()
   Collider = nil
 
